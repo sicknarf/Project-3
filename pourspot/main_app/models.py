@@ -48,8 +48,11 @@ class Drink(models.Model):
         return self.name
 
 class Recipe(models.Model):
+    ingredients = models.CharField(
+            max_length = 20,
+            choices = INGREDIENT_TYPE,
+    )
     instructions = models.CharField(max_length=1000)
-    ingredients = models.ManyToManyField(RecipeIngredient)
     skill_level = models.CharField(
         max_length = 1,
         choices = SKILL,

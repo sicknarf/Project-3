@@ -36,6 +36,7 @@ class RecipeDetail(DetailView):
 ###################### NEEDS ATTENTION ######################
 class RecipeCreate(CreateView):
     model = Recipe
+    form_class = RecipeForm
 
 ###################### NEEDS ATTENTION ######################
 # class RecipeDelete(LoginRequiredMixin, DeleteView):
