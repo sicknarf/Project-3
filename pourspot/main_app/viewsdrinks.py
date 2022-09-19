@@ -32,8 +32,19 @@ def drink_index(request):
 # @login_required
 def drinks_detail(request, drink_id):
     drink = Drink.objects.get(id=drink_id)
+    # select name, description from table_name where
+    # id = drink_id
+    #i = drink.ingredients.all().values_list('id')
+    #ingredients_drink_doesnt_have = Ingredient.objects.exclude(id_in=i)
+    recipe_form = RecipeForm()
+    return render(
+        request,
+        'drinks/detail.html',
+        {'drink': drink, 'recipe_form': recipe_form, }
+    )
     # code to link to recipes, referring to this code from catcollector:
     # toys_cat_doesnt_have = Toy.objects.exclude(id__in = cat.toys.all().values_list('id'))
+<<<<<<< HEAD
     # i = drink.ingredients.all().values_list('id')
     # ingredients_pokemon_doesnt_have = Drink.objects.exclude(id_in=i)
     recipe_form =RecipeForm()
@@ -42,6 +53,7 @@ def drinks_detail(request, drink_id):
         'drinks/detail.html',
         {'drink':drink, 'recipe_form': recipe_form,}
    )
+
 
 # @login_required
 def add_recipe(request, drink_id):
@@ -73,7 +85,12 @@ class DrinkUpdate(UpdateView):
         return reverse('detail', args=(self.object.id, ))
 
 
-
+class DrinkUpdate(UpdateView):
+    model = Drink
+    fields = ['description', 'age']
+    def get_success_url(self, **kwargs):
+        return reverse('detail', args=(self.object.id, ))
+        
 ###################### NEEDS ATTENTION ######################
 class RecipeDetail(DetailView):
     def get(self, request):
