@@ -21,7 +21,8 @@
                 <!-- changes below -->
                 <li><a href="#">about</a></li>
                 {% comment %} {% if user.is_authenticated %} {% endcomment %}
-                  <li><a href="#">ingredients</a></li>
+                {% comment %} <li><a href="{% url 'ingredients_add' %}">add ingredient</a></li>{% endcomment %}
+                  <li><a href="{% url 'ingredients_index' %}">ingredients</a></li>
                   <li><a href="{% url 'drinks_create' %}">new drink</a></li>
                   <li><a href="{% url 'index' %}">all drinks</a></li>
                   <li><a href="#">log out</a></li>

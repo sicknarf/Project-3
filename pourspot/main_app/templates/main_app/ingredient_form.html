@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if object %}
+        <h1>Edit <span class="teal-text"> {{ object.name }}</span></h1>
+    {% else %}    
+        <h1>Add Ingredient</h1>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit!" class="btn">
+    </form>
+    <h1>Ingredients List</h1>
+
+    {% for ingredient in ingredients_list %}
+        <a href="{% url 'ingredients_detail' ingredient.id %}">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">{{ ingredient.name }}</span>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+
+{% endblock %}
