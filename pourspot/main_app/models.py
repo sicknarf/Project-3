@@ -35,6 +35,10 @@ class Ingredient(models.Model):
         # return reverse('ingredients_detail', kwargs={'pk': self.id})
         pass
 
+class RecipeIngredient(Ingredient):
+    class Meta:
+        proxy = True
+
 class Drink(models.Model):
     name = models.CharField(max_length=100)  # HAS A
     description = models.TextField(max_length=250)
@@ -45,7 +49,7 @@ class Drink(models.Model):
 
 class Recipe(models.Model):
     instructions = models.CharField(max_length=1000)
-    ingredients = models.ManyToManyField(Ingredient)
+    ingredients = models.ManyToManyField(RecipeIngredient)
     skill_level = models.CharField(
         max_length = 1,
         choices = SKILL,
@@ -54,5 +58,5 @@ class Recipe(models.Model):
     drink = models.ForeignKey(Drink, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"a {len(self.ingredients)} ingredient recipe for {self.drink}"
+        return f"{self.drink} recipe made with {self.ingredients}"
 
