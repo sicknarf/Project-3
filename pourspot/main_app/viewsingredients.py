@@ -22,14 +22,23 @@ from .forms import RecipeForm
 # the below classes may take some fiddling. not sure if a function based view is best for recipes.
 class IngredientList(ListView):
     model = Ingredient
+    fields = '__all__'
 
 class IngredientCreate(CreateView):
     model = Ingredient
+<<<<<<< HEAD
     fields = ['']
+=======
+    fields = ['name', 'type']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+>>>>>>> 6fba32af0b269697fbec485399eff20be1a1a963
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
-    fields = ['type']
+    fields = ['name','type']
 
 ###################### NEEDS ATTENTION ######################
 # refer to toys for this one in catcollector. this is to associate ingredients with recipes.
