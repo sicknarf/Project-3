@@ -12,6 +12,7 @@ INGREDIENT_TYPE = (
     ('R', 'Sour'),
     ('F', 'Fizz'),
     ('M', 'Smash'),
+    ('P', 'Syrup'),
     ('B', 'Bitters'),
     ('H', 'Herb'),
     ('J', 'Juice'),
@@ -43,7 +44,8 @@ class Drink(models.Model):
         return self.name
 
 class Recipe(models.Model):
-    ingredients: models.ManyToManyField(Ingredient)
+    instructions = models.CharField(max_length=1000)
+    ingredients = models.ManyToManyField(Ingredient)
     skill_level = models.CharField(
         max_length = 1,
         choices = SKILL,
@@ -52,6 +54,5 @@ class Recipe(models.Model):
     drink = models.ForeignKey(Drink, on_delete=models.CASCADE)
 
     def __str__(self):
-        # return f"a {len(self.ingredients)} ingredient recipe for {self.drink}"
-        pass
+        return f"a {len(self.ingredients)} ingredient recipe for {self.drink}"
 

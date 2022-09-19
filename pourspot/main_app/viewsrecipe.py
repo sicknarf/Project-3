@@ -41,8 +41,7 @@ class RecipeDetail(DetailView):
 
 ###################### NEEDS ATTENTION ######################
 class RecipeCreate(CreateView):
-    def get(self, request):
-        return HttpResponse('<h1>this is recipe create</h1>')
+    model = Recipe
 
 ###################### NEEDS ATTENTION ######################
 # class RecipeDelete(LoginRequiredMixin, DeleteView):
