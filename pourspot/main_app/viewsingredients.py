@@ -26,7 +26,7 @@ class IngredientList(ListView):
 
 class IngredientCreate(CreateView):
     model = Ingredient
-    fields = ['ingredient', 'type']
+    fields = ['name', 'type']
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -34,7 +34,7 @@ class IngredientCreate(CreateView):
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
-    fields = ['ingredient','type']
+    fields = ['name','type']
 
 ###################### NEEDS ATTENTION ######################
 # refer to toys for this one in catcollector. this is to associate ingredients with recipes.
