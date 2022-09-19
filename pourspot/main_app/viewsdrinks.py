@@ -44,7 +44,7 @@ def drinks_detail(request, drink_id):
     )
     # code to link to recipes, referring to this code from catcollector:
     # toys_cat_doesnt_have = Toy.objects.exclude(id__in = cat.toys.all().values_list('id'))
-<<<<<<< HEAD
+
     # i = drink.ingredients.all().values_list('id')
     # ingredients_pokemon_doesnt_have = Drink.objects.exclude(id_in=i)
     recipe_form =RecipeForm()
@@ -88,6 +88,12 @@ class DrinkUpdate(UpdateView):
 class DrinkUpdate(UpdateView):
     model = Drink
     fields = ['description', 'age']
+    def get_success_url(self, **kwargs):
+        return reverse('detail', args=(self.object.id, ))
+
+class DrinkDelete(DeleteView):
+    model = Drink
+    fields = ['name','description']
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id, ))
         

@@ -17,9 +17,11 @@ urlpatterns = [
     path('drinks/create/', viewsdrinks.DrinkCreate.as_view(), name='drinks_create'),
     # http://localhost:8000/drinks/drinks/update
     path('drinks/<int:pk>/update/', viewsdrinks.DrinkUpdate.as_view(), name='drinks_update'),
-    # http://localhost:8000/dogs/2/update/
-    path('drinks/<int:pk>/update/',
-         viewsdrinks.DrinkUpdate.as_view(), name='drinks_update'),
+     # http://localhost:8000/drinks/drinks/update
+    path('drinks/<int:pk>/update/', viewsdrinks.DrinkUpdate.as_view(), name='drinks_update'),
+    # http://localhost:8000/dogs/2/delete/
+    path('drinks/<int:pk>/delete/',
+         viewsdrinks.DrinkDelete.as_view(), name='drinks_delete'),
     # http://localhost:8000/drinks/2/add_feeding/
     path('drinks/<int:drink_id>/add_recipe/', viewsrecipes.add_recipe, name="add_recipe"),
 
