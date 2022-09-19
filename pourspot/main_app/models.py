@@ -37,7 +37,8 @@ class Ingredient(models.Model):
 class Drink(models.Model):
     name = models.CharField(max_length=100)  # HAS A
     description = models.TextField(max_length=250)
-    
+    # is_private = models.BooleanField()
+
     def __str__(self):
         return self.name
 
