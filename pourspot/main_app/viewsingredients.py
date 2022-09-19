@@ -26,15 +26,7 @@ class IngredientList(ListView):
 
 class IngredientCreate(CreateView):
     model = Ingredient
-<<<<<<< HEAD
-    fields = ['']
-=======
-    fields = ['name', 'type']
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
->>>>>>> 6fba32af0b269697fbec485399eff20be1a1a963
+    fields = ['name','type']
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
