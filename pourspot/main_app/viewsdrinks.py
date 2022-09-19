@@ -32,9 +32,19 @@ def drink_index(request):
 # @login_required
 def drinks_detail(request, drink_id):
     drink = Drink.objects.get(id=drink_id)
+    # select name, description from table_name where
+    # id = drink_id
+    i = drink.ingredients.all().values_list('id')
+    ingredients_drink_doesnt_have = Ingredient.objects.exclude(id_in=i)
+    recipe_form = RecipeForm()
+    return render(
+        request,
+        'drinks/detail.html',
+        {'drink': drink, 'recipe_form': recipe_form, 'ingredients': ingredients_drink_doesnt_have}
+    )
     # code to link to recipes, referring to this code from catcollector:
     # toys_cat_doesnt_have = Toy.objects.exclude(id__in = cat.toys.all().values_list('id'))
-    pass
+
 
 # @login_required
 def add_recipe(request, drink_id):
