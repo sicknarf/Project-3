@@ -30,7 +30,8 @@ urlpatterns = [
     # path('drinks/<int:drink>/add_photo', views.add_photo, name='add_photo'),
 
     # http://localhost:8000/ingredients/
-    path('ingredients/', viewsingredients.IngredientList.as_view(), name='ingredients_index'),
+    path('ingredients/index', viewsingredients.IngredientList.as_view(), name='ingredients_index'),
+    path('ingredients/', viewsingredients.IngredientCreate.as_view(), name='ingredients_create'),
 
     # http://localhost:8000/drinks/1/recipes/1/
     ###################### NEEDS ATTENTION ######################
