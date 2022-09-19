@@ -42,6 +42,7 @@ def drinks_detail(request, drink_id):
         'drinks/detail.html',
         {'drink': drink, 'recipe_form': recipe_form, }
     )
+
     # code to link to recipes, referring to this code from catcollector:
     # toys_cat_doesnt_have = Toy.objects.exclude(id__in = cat.toys.all().values_list('id'))
 
@@ -71,10 +72,15 @@ class DrinkCreate(CreateView):
 
 class DrinkUpdate(UpdateView):
     model = Drink
-    fields = ['description', 'age']
+
+    fields = ['name', 'description', ]
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id, ))
-        
+
+class DrinkDelete(DeleteView):
+    model = Drink
+    success_url = '/drinks/'
+
 ###################### NEEDS ATTENTION ######################
 class RecipeDetail(DetailView):
     def get(self, request):
