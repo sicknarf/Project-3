@@ -17,8 +17,7 @@ from .models import Ingredient, Drink, Recipe
 from .forms import RecipeForm
 
 def home(request):
-    # return render(request, 'home.html')
-    return HttpResponse('<h1>hello</h1>')
+    return render(request, 'home.html')
 
 def about_us(request):
     return render(request, 'about.html')

@@ -1,8 +1,13 @@
 from django.forms import ModelForm
-from .models import Recipe
+from django import forms
+from .models import Ingredient, Recipe
 
 class RecipeForm(ModelForm):
     class Meta:
         model = Recipe
         # I am unsure about the below piece of code
-        fields = '__all__'
+        fields = ['ingredients', 'instructions', 'skill_level', 'drink']
+        ingredients = forms.ModelMultipleChoiceField(
+            queryset=Ingredient.objects.all(),
+            widget=forms.CheckboxSelectMultiple,
+        )
