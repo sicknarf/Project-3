@@ -9,12 +9,14 @@ urlpatterns = [
     # http://localhost:8000/about-us/
     path('about-us/', views.about_us, name='about_us'),
     # http://localhost:8000/drinks/
-    path('drinks/', views.drink_index, name='index'),
+    path('drinks/', viewsdrinks.drink_index, name='index'),
     # http://localhost:8000/drinks/1/
     path('drinks/<int:drink_id>/', viewsdrinks.drinks_detail, name='detail'),
     # new route used to show a form and create a drink.
     # http://localhost:8000/drinks/create/
     path('drinks/create/', viewsdrinks.DrinkCreate.as_view(), name='drinks_create'),
+    # http://localhost:8000/drinks/drinks/update
+    path('drinks/<int:pk>/update/', viewsdrinks.DrinkUpdate.as_view(), name='drinks_update'),
     # http://localhost:8000/drinks/2/add_feeding/
     path('drinks/<int:drink_id>/add_recipe/', viewsrecipes.add_recipe, name="add_recipe"),
 

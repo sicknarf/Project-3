@@ -23,7 +23,7 @@
                 {% comment %} {% if user.is_authenticated %} {% endcomment %}
                   {% comment %} <li><a href="{% url 'toys_create' %}">Add a Toy</a></li> {% endcomment %}
                   <li><a href="#">ingredients</a></li>
-                  <li><a href="#">new drink</a></li>
+                  <li><a href="{%  url 'drinks_create' %}">new drink</a></li>
                   <li><a href="#">all drinks</a></li>
                   <li><a href="#">log out</a></li>
                 {% comment %} {% else %} {% endcomment %}

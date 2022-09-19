@@ -34,7 +34,14 @@ def drinks_detail(request, drink_id):
     drink = Drink.objects.get(id=drink_id)
     # code to link to recipes, referring to this code from catcollector:
     # toys_cat_doesnt_have = Toy.objects.exclude(id__in = cat.toys.all().values_list('id'))
-    pass
+    # i = drink.ingredients.all().values_list('id')
+    # ingredients_pokemon_doesnt_have = Drink.objects.exclude(id_in=i)
+    recipe_form =RecipeForm()
+    return render(
+        request,
+        'drinks/detail.html',
+        {'drink':drink, 'recipe_form': recipe_form,}
+   )
 
 # @login_required
 def add_recipe(request, drink_id):
@@ -55,9 +62,16 @@ class DrinkCreate(CreateView):
         return super().form_valid(form)
     
     def get_success_url(self, **kwargs):
-        return reverse('detail', args=(self.object.id))
+        return reverse('detail', args=(self.object.id, ))
 
 # do we want to give users the functionality to delete an entire drink complete with recipes?
+class DrinkUpdate(UpdateView):
+    model = Drink
+    fields = ['name', 'description']
+
+    def get_success_url(self, **kwargs):
+        return reverse('detail', args=(self.object.id, ))
+
 
 
 ###################### NEEDS ATTENTION ######################
@@ -101,20 +115,6 @@ def assoc_ingredient(request, recipe_id, ingredient_id):
 def some_function(request):
     secret_key = os.environ['SECRET_KEY']
 
-def signup(request):
-    error_message = ''
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('index')
-        else:
-            error_message = 'Invalid signup. Please try again.'
 
-    form = UserCreationForm()
-    context = {
-        'form': form,
-        'error_message': error_message
-    }
-    return render(request, 'registration/signup.html', context)
+
+
