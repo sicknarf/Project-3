@@ -1,7 +1,7 @@
 from django.urls import path
 
 from main_app import viewsingredients
-from . import views, viewsdrinks, viewsrecipes, viewsingredients
+from . import views, viewsdrinks, viewsrecipe, viewsingredients
 
 urlpatterns = [
     # http://localhost:8000
