@@ -16,12 +16,6 @@ from django.http import HttpResponse
 from .models import Ingredient, Drink, Recipe
 from .forms import RecipeForm
 
-def home(request):
-    # return render(request, 'home.html')
-    return HttpResponse('<h1>hello</h1>')
-
-def about_us(request):
-    return render(request, 'about.html')
 
 
 # @login_required
@@ -41,8 +35,8 @@ class RecipeDetail(DetailView):
 
 ###################### NEEDS ATTENTION ######################
 class RecipeCreate(CreateView):
-    def get(self, request):
-        return HttpResponse('<h1>this is recipe create</h1>')
+    model = Recipe
+    form_class = RecipeForm
 
 ###################### NEEDS ATTENTION ######################
 # class RecipeDelete(LoginRequiredMixin, DeleteView):
