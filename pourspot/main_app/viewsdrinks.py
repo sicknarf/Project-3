@@ -71,10 +71,14 @@ class DrinkCreate(CreateView):
 
 class DrinkUpdate(UpdateView):
     model = Drink
-    fields = ['description', 'age']
+    fields = ['name', 'description', ]
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id, ))
-        
+
+class DrinkDelete(DeleteView):
+    model = Drink
+    success_url = '/drinks/'
+
 ###################### NEEDS ATTENTION ######################
 class RecipeDetail(DetailView):
     def get(self, request):
