@@ -1,6 +1,6 @@
 # imports for image uplaoading to AWS
 import os
-import boto3
+# import boto3
 import uuid
 
 # django imports
@@ -17,7 +17,8 @@ from .models import Ingredient, Drink, Recipe
 from .forms import RecipeForm
 
 def home(request):
-    return render(request, 'home.html')
+    # return render(request, 'home.html')
+    return HttpResponse('<h1>hello</h1>')
 
 def about_us(request):
     return render(request, 'about.html')
