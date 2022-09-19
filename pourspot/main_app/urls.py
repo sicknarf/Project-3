@@ -9,7 +9,7 @@ urlpatterns = [
     # http://localhost:8000/about-us/
     path('about-us/', views.about_us, name='about_us'),
     # http://localhost:8000/drinks/
-    path('drinks/', views.drink_index, name='index'),
+    path('drinks/', viewsdrinks.drink_index, name='index'),
     # http://localhost:8000/drinks/1/
     path('drinks/<int:drink_id>/', viewsdrinks.drinks_detail, name='detail'),
     # new route used to show a form and create a drink.
