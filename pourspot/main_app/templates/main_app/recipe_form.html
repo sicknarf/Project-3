@@ -4,7 +4,6 @@
   <h1>Add a New Recipe!</h1>
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
   <form action="" method="POST">
-    <!-- Django requires the following for security purposes -->
     {% csrf_token %}
     <table>
       <!-- Render the inputs inside of <tr>s & <td>s -->
@@ -12,4 +11,10 @@
     </table>
     <input type="submit" value="Submit!" class="btn">
   </form>
+    <script>
+        const ingredientsSelect = document.getElementById('id_ingredients');
+        M.FormSelect.init(ingredientsSelect);
+        const skillLevelSelect = document.getElementById('id_skill_level');
+        M.FormSelect.init(skillLevelSelect);
+    </script>
 {% endblock %}

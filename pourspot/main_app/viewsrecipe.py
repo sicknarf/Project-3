@@ -36,7 +36,9 @@ class RecipeDetail(DetailView):
 ###################### NEEDS ATTENTION ######################
 class RecipeCreate(CreateView):
     model = Recipe
-    form_class = RecipeForm
+    form = RecipeForm
+    fields = ['ingredients', 'instructions', 'skill_level']
+
 
 ###################### NEEDS ATTENTION ######################
 # class RecipeDelete(LoginRequiredMixin, DeleteView):
