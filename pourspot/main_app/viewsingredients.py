@@ -47,7 +47,12 @@ def ingredient_detail(request, ingredient_id):
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
-    fields = ['name','type']
+     # return HttpResponse("test")
+    # fields = ['name','type']
+
+    fields = ['name', 'type' ]
+    def get_success_url(self, **kwargs):
+        return reverse('ingredient_detail', args=(self.object.id, ))
 
 class IngredientDelete(DeleteView):
     model = Ingredient
