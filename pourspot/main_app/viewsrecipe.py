@@ -22,10 +22,10 @@ from enum import Enum
 # @login_required
 def add_recipe(request, drink_id):
     form = RecipeForm(request.POST)
+    print(request.POST)
     if form.is_valid():
         new_recipe = form.save(commit=False)
         new_recipe.drink_id = drink_id
-        # new_recipe.ingredient
         new_recipe.save()
         drink = Drink.objects.get(id=drink_id)
         return render(request, 'drinks/detail.html', {'drink':drink})

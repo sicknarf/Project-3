@@ -13,7 +13,7 @@ class RecipeForm(ModelForm):
         #     widget=forms.CheckboxSelectMultiple,
         # )
         skill_level = forms.CharField(
-            label='What is your favorite fruit?', 
+            label='Choose the difficulty of this recipe', 
             widget=forms.Select(choices=SKILL),)
 
 class IngredientForm(ModelForm):
