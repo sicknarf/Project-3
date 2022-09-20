@@ -25,13 +25,13 @@
         </a>
     {% endfor %} -->
 
-    {% if ingredient.count %}
-      {% for one in ingredient.all %}
+    {% if ingredients.count %}
+      {% for ingredient in ingredients %}
         <div class="card">
           <div class="card-content">
             <span class="card-title">
-              {{ one.name }}
-              {{ one.type }}
+              {{ ingredient.name }}
+              {{ ingredient.type }}
             </span>
           </div>
         </div>

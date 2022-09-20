@@ -25,11 +25,12 @@ class IngredientList(ListView):
     fields = '__all__'
 
 def add_ingredient(request):
+    ingredients = Ingredient.objects.all
     form = IngredientForm(request.POST)
     if form.is_valid():
         new_ingredient = form.save()
         new_ingredient.save()
-    return render(request, 'main_app/ingredient_form.html', {'form': form})
+    return render(request, 'main_app/ingredient_form.html', {'form': form, 'ingredients': ingredients})
 
 # class IngredientCreate(CreateView):
 #     model = Ingredient

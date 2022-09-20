@@ -29,12 +29,10 @@ def add_recipe(request, drink_id):
         return render(request, 'drinks/detail.html', {'drink':drink})
     return render(request, 'main_app/recipe_form.html', {'form': form})
 
-
-
-###################### NEEDS ATTENTION ######################
-class RecipeDetail(DetailView):
-    def get(self, request):
-        return HttpResponse('<h1>this is recipe detail</h1>')
+def recipe_detail(request, drink_id, recipe_id):
+    drink = Drink.objects.get(id=drink_id)
+    recipe = Recipe.objects.get(id=recipe_id)
+    return render(request, 'drinks/recipe_detail.html', {'drink':drink, 'recipe':recipe})
 
 
 ###################### NEEDS ATTENTION ######################
