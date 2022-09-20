@@ -15,6 +15,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from .models import Ingredient, Drink, Recipe
 from .forms import RecipeForm
+from enum import Enum
 
 
 
@@ -24,6 +25,7 @@ def add_recipe(request, drink_id):
     if form.is_valid():
         new_recipe = form.save(commit=False)
         new_recipe.drink_id = drink_id
+        # new_recipe.ingredient
         new_recipe.save()
         drink = Drink.objects.get(id=drink_id)
         return render(request, 'drinks/detail.html', {'drink':drink})
