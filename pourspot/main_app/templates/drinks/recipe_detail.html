@@ -7,8 +7,8 @@
 <p>skill: {{recipe.skill_level}}</p>
 <p>recipe:</p>
 
-{% if recipe.ingredients.count %}
-    {% for ingredient in recipe.ingredients.all %}
+{% if recipe_id.ingredients.count %}
+    {% for ingredient in recipe_id.ingredients.all %}
     <p>{{ingredient.name}}</p>
     {% endfor %}
 {% else %}
