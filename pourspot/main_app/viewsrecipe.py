@@ -25,19 +25,16 @@ def add_recipe(request, drink_id):
         new_recipe = form.save(commit=False)
         new_recipe.drink_id = drink_id
         new_recipe.save()
-    return redirect('detail', drink_id=drink_id)
+        drink = Drink.objects.get(id=drink_id)
+        return render(request, 'drinks/detail.html', {'drink':drink})
+    return render(request, 'main_app/recipe_form.html', {'form': form})
+
 
 
 ###################### NEEDS ATTENTION ######################
 class RecipeDetail(DetailView):
     def get(self, request):
         return HttpResponse('<h1>this is recipe detail</h1>')
-
-###################### NEEDS ATTENTION ######################
-class RecipeCreate(CreateView):
-    model = Recipe
-    form = RecipeForm
-    fields = ['ingredients', 'instructions', 'skill_level']
 
 
 ###################### NEEDS ATTENTION ######################
