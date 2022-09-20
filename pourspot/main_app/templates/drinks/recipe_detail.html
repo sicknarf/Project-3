@@ -7,7 +7,13 @@
 <p>skill: {{recipe.skill_level}}</p>
 <p>recipe:</p>
 
-
+{% if recipe.ingredients.count %}
+    {% for ingredient in recipe.ingredients.all %}
+    <p>{{ingredient.name}}</p>
+    {% endfor %}
+{% else %}
+    <p>there are no ingredients in this recipe!</p>
+{% endif %}
 
 
 {% endblock %}

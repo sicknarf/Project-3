@@ -61,7 +61,7 @@ class IngredientUpdate(UpdateView):
 
 class IngredientDelete(DeleteView):
     model = Ingredient
-    success_url ='/ingredients_index/'
+    success_url ='/ingredients/'
 
 ###################### NEEDS ATTENTION ######################
 # refer to toys for this one in catcollector. this is to associate ingredients with recipes.
