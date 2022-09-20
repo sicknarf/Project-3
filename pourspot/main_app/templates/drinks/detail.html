@@ -17,9 +17,7 @@
             </div>
         </div>
         <!-- Insert photo markup below this comment -->
-        {% for recipe in drink.recipe_set.all %}
-        <a href="#">recipe by a person</a>
-        {% endfor %}
+        
         <div class="card-action">
             <a href="{% url 'recipe_create' drink.id %}">add a recipe</a>
         </div>

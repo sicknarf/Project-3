@@ -27,7 +27,7 @@ class Ingredient(models.Model):
         choices = INGREDIENT_TYPE,
         default = INGREDIENT_TYPE[0][0]
     )
-
+    
     def __str__(self):
         return self.name
 
