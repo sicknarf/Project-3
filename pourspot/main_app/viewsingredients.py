@@ -54,9 +54,13 @@ class IngredientUpdate(UpdateView):
     model = Ingredient
     fields = ['name','type']
 
+    fields = ['name', 'type', ]
+    def get_success_url(self, **kwargs):
+        return reverse('ingredient_detail', args=(self.object.id, ))
+
 class IngredientDelete(DeleteView):
     model = Ingredient
-    success_url ='/ingredients_index/'
+    success_url ='/ingredients/'
 
 ###################### NEEDS ATTENTION ######################
 # refer to toys for this one in catcollector. this is to associate ingredients with recipes.
