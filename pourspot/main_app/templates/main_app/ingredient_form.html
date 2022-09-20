@@ -13,7 +13,7 @@
         </table>
         <input type="submit" value="Submit!" class="btn">
     </form>
-    <h1>Ingredients List</h1>
+    
 
     <!-- {% for ingredient in ingredient.all %}
         <a href="#">ingredient.ingredients
@@ -24,8 +24,10 @@
             </div>
         </a>
     {% endfor %} -->
-
+    {% if object %}
+    {% else %}
     {% if ingredients.count %}
+    <h1>Ingredients List</h1>
       {% for ingredient in ingredients %}
       <a href="{% url 'ingredient_detail' ingredient.id %}">
         <div class="card">
@@ -41,6 +43,8 @@
     {% else %}
       <h5>No Ingredients :(</h5>
     {% endif %}
+    {% endif %}
+
 
     <script>
         const typeSelect = document.getElementById('id_type');

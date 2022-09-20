@@ -28,7 +28,7 @@ def add_recipe(request, drink_id):
         new_recipe.drink_id = drink_id
         new_recipe.save()
         drink = Drink.objects.get(id=drink_id)
-        return render(request, 'drinks/detail.html', {'drink':drink})
+        return render(request, 'drinks/detail.html', {'drink': drink})
     return render(request, 'main_app/recipe_form.html', {'form': form})
 
 def recipe_detail(request, drink_id, recipe_id):
