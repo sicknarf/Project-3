@@ -31,9 +31,14 @@ urlpatterns = [
 
     # http://localhost:8000/ingredients/
     path('ingredients/index', viewsingredients.IngredientList.as_view(), name='ingredients_index'),
+    # http://localhost:8000/ingredients/detail
+    path('ingredients/<int:ingredient_id>/', viewsingredients.ingredient_detail, name='ingredient_detail'),
     # path('ingredients/', viewsingredients.IngredientCreate.as_view(), name='ingredients_create'),
     path('ingredients/', viewsingredients.add_ingredient, name="add_ingredient"),
-
+    # http://localhost:8000/ingredients/edit
+    path('ingredients/update', viewsingredients.IngredientUpdate.as_view(), name="update_ingredient"),
+    # http://localhost:8000/ingredients/delete
+    path('ingredients/delete', viewsingredients.IngredientDelete.as_view(), name="delete_ingredient"),
     # http://localhost:8000/drinks/1/recipes/1/
     ###################### NEEDS ATTENTION ######################
     # this was previously <int:pk> instead of <int:drink_id> and <int:recipe_id>
