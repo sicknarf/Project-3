@@ -27,6 +27,7 @@
 
     {% if ingredients.count %}
       {% for ingredient in ingredients %}
+      <a href="{% url 'ingredient_detail' ingredient.id %}">
         <div class="card">
           <div class="card-content">
             <span class="card-title">
@@ -35,6 +36,7 @@
             </span>
           </div>
         </div>
+      </a>
       {% endfor %}
     {% else %}
       <h5>No Ingredients :(</h5>
