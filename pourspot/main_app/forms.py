@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import SKILL, Ingredient, Recipe
+from .models import SKILL, Ingredient, Recipe, INGREDIENT_TYPE 
 
 class RecipeForm(ModelForm):
     class Meta:
@@ -15,3 +15,14 @@ class RecipeForm(ModelForm):
         skill_level = forms.CharField(
             label='What is your favorite fruit?', 
             widget=forms.Select(choices=SKILL),)
+
+class IngredientForm(ModelForm):
+    class Meta:
+        model = Ingredient
+        fields =['name', 'type']
+
+    type = forms.CharField(
+        label='test',
+        widget=forms.Select(choices=INGREDIENT_TYPE),
+
+    )
