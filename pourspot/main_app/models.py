@@ -26,7 +26,7 @@ class Ingredient(models.Model):
         max_length = 1,
         choices = INGREDIENT_TYPE,
     )
-
+    
     def __str__(self):
         return self.name
 
