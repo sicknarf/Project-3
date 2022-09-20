@@ -24,6 +24,7 @@ class IngredientList(ListView):
     model = Ingredient
     fields = '__all__'
 
+
 def add_ingredient(request):
     ingredients = Ingredient.objects.all
     form = IngredientForm(request.POST)
@@ -41,6 +42,11 @@ def ingredient_detail(request, ingredient_id):
         'main_app/ingredient_detail.html', 
         {'ingredient':ingredient,'ingredient_form': ingredient_form}
         )
+
+class IngredientCreate(CreateView):
+    model = Ingredient
+    fields = ['name','type']
+
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
