@@ -3,6 +3,11 @@
 
 <h1>hey howdy hey this is recipe_detail.html</h1>
 <p>I'm trying to figure out so here are two dynamic elements:</p>
-<p>drink: {{drink}} recipe: {{recipe}}<p>
+<p>drink: {{drink}}</p>
+<p>recipe:</p>
+
+{% for ingredient in recipe.ingredients.all %}
+{{ingredient.name}}
+{% endfor %}
 
 {% endblock %}
