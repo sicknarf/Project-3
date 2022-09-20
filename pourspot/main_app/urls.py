@@ -36,9 +36,9 @@ urlpatterns = [
     # path('ingredients/', viewsingredients.IngredientCreate.as_view(), name='ingredients_create'),
     path('ingredients/', viewsingredients.add_ingredient, name="add_ingredient"),
     # http://localhost:8000/ingredients/edit
-    path('ingredients/update', viewsingredients.IngredientUpdate.as_view(), name="update_ingredient"),
+    path('ingredients/<int:pk>/update/', viewsingredients.IngredientUpdate.as_view(), name="update_ingredient"),
     # http://localhost:8000/ingredients/delete
-    path('ingredients/delete', viewsingredients.IngredientDelete.as_view(), name="delete_ingredient"),
+    path('ingredients/<int:pk>/delete/', viewsingredients.IngredientDelete.as_view(), name="delete_ingredient"),
     # http://localhost:8000/drinks/1/recipes/1/
     ###################### NEEDS ATTENTION ######################
     # this was previously <int:pk> instead of <int:drink_id> and <int:recipe_id>
