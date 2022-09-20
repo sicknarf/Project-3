@@ -14,7 +14,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
 from django.http import HttpResponse
 from .models import Ingredient, Drink, Recipe
-from .forms import RecipeForm
+from .forms import RecipeForm , IngredientForm
 
 
 
@@ -24,13 +24,21 @@ class IngredientList(ListView):
     model = Ingredient
     fields = '__all__'
 
-class IngredientCreate(CreateView):
-    model = Ingredient
-    fields = ['name', 'type']
+def add_ingredient(request):
+    ingredients = Ingredient.objects.all
+    form = IngredientForm(request.POST)
+    if form.is_valid():
+        new_ingredient = form.save()
+        new_ingredient.save()
+    return render(request, 'main_app/ingredient_form.html', {'form': form, 'ingredients': ingredients})
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+# class IngredientCreate(CreateView):
+#     model = Ingredient
+#     fields = ['name', 'type']
+
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super().form_valid(form)
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
