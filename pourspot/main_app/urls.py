@@ -31,13 +31,13 @@ urlpatterns = [
 
     # http://localhost:8000/ingredients/
     path('ingredients/index', viewsingredients.IngredientList.as_view(), name='ingredients_index'),
-#     path('ingredients/', viewsingredients.IngredientCreate.as_view(), name='ingredients_create'),
+    # path('ingredients/', viewsingredients.IngredientCreate.as_view(), name='ingredients_create'),
     path('ingredients/', viewsingredients.add_ingredient, name="add_ingredient"),
 
     # http://localhost:8000/drinks/1/recipes/1/
     ###################### NEEDS ATTENTION ######################
     # this was previously <int:pk> instead of <int:drink_id> and <int:recipe_id>
-    path('ingredients/<int:drink_id>/recipes/<int:recipe_id>/', viewsrecipe.RecipeDetail.as_view(), name='recipe_detail'),
+    path('ingredients/<int:drink_id>/recipes/<int:recipe_id>/', viewsrecipe.recipe_detail, name='recipe_detail'),
 
     ###################### NEEDS ATTENTION ######################
     # http://localhost:8000/drinks/1/recipes/create/
