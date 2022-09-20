@@ -32,14 +32,6 @@ def add_ingredient(request):
         new_ingredient.save()
     return render(request, 'main_app/ingredient_form.html', {'form': form, 'ingredients': ingredients})
 
-# class IngredientCreate(CreateView):
-#     model = Ingredient
-#     fields = ['name', 'type']
-
-#     def form_valid(self, form):
-#         form.instance.user = self.request.user
-#         return super().form_valid(form)
-
 def ingredient_detail(request, ingredient_id):
     ingredient = Ingredient.objects.get(id=ingredient_id)
     # return HttpResponse("test")
