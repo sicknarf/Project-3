@@ -40,9 +40,18 @@ def add_ingredient(request):
 #         form.instance.user = self.request.user
 #         return super().form_valid(form)
 
+def ingredient_detail(request, ingredient_id):
+    ingredient = Ingredient.objects.get(id=ingredient_id)
+    # return HttpResponse("test")
+    return render(request, 'main_app/ingredient_detail.html', {'ingredient':ingredient})
+
 class IngredientUpdate(UpdateView):
     model = Ingredient
     fields = ['name','type']
+
+class IngredientDelete(DeleteView):
+    model = Ingredient
+    success_url ='/ingredients_index/'
 
 ###################### NEEDS ATTENTION ######################
 # refer to toys for this one in catcollector. this is to associate ingredients with recipes.
