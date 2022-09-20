@@ -24,9 +24,9 @@ class IngredientList(ListView):
     model = Ingredient
     fields = '__all__'
 
-class IngredientCreate(CreateView):
-    model = Ingredient
-    fields = ['name','type']
+# class IngredientCreate(CreateView):
+#     model = Ingredient
+#     fields = ['name','type']
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
