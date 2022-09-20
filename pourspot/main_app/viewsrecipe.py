@@ -25,6 +25,7 @@ def add_recipe(request, drink_id):
     if form.is_valid():
         new_recipe = form.save(commit=False)
         new_recipe.drink_id = drink_id
+        # new_recipe.ingredient
         new_recipe.save()
         drink = Drink.objects.get(id=drink_id)
         return render(request, 'drinks/detail.html', {'drink':drink})
@@ -33,8 +34,6 @@ def add_recipe(request, drink_id):
 def recipe_detail(request, drink_id, recipe_id):
     drink = Drink.objects.get(id=drink_id)
     recipe = Recipe.objects.get(id=recipe_id)
-    for ingredient in recipe.ingredients.all:
-        print(ingredient)
     return render(request, 'drinks/recipe_detail.html', {'drink':drink, 'recipe':recipe})
 
 

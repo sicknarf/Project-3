@@ -4,10 +4,16 @@
 <h1>hey howdy hey this is recipe_detail.html</h1>
 <p>I'm trying to figure out so here are two dynamic elements:</p>
 <p>drink: {{drink}}</p>
+<p>skill: {{recipe.skill_level}}</p>
 <p>recipe:</p>
 
-{% for ingredient in recipe.ingredients.all %}
-{{ingredient.name}}
-{% endfor %}
+
+{% if recipe.ingredients.count %}
+    {% for ingredient in recipe.ingredients.all %}
+    <p>{{ingredient.name}}</p>
+    {% endfor %}
+{% else %}
+    <p>there are no ingredients in this recipe!</p>
+{% endif %}
 
 {% endblock %}
