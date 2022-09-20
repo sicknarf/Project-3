@@ -1,21 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Drink Details</h1>
-<div class="row">
-    <div class="col s6">
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">{{ drink.name }}</span>
-                <p>Drink Name: {{ drink.name }}</p>
-                <p>Description: {{ drink.description|linebreaks }}</p>
-            </div>
-            <div class="card-action">
-                <a href="{% url 'drinks_update' drink.id %}">Edit</a>
-                <a href="{% url 'drinks_delete' drink.id %}">Delete</a>
-            </div>
-        </div>
-        <!-- Insert photo markup below this comment -->
-        <div class="card-action">
-            <a href="{% url 'recipe_create' drink.id %}">add a recipe</a>
-        </div>
+  <h1>Add a New Recipe!</h1>
+  <!-- Leaving the action empty makes the form post to the same url used to display it -->
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      <!-- Render the inputs inside of <tr>s & <td>s -->
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit!" class="btn">
+  </form>
+    <script>
+        const ingredientsSelect = document.getElementById('id_ingredients');
+        M.FormSelect.init(ingredientsSelect);
+        const skillLevelSelect = document.getElementById('id_skill_level');
+        M.FormSelect.init(skillLevelSelect);
+    </script>
 {% endblock %}

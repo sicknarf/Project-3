@@ -40,7 +40,7 @@ def drinks_detail(request, drink_id):
     return render(
         request,
         'drinks/detail.html',
-        {'drink': drink, 'recipe_form': recipe_form, }
+        {'drink': drink, 'recipe_form': recipe_form }
     )
 
     # code to link to recipes, referring to this code from catcollector:
