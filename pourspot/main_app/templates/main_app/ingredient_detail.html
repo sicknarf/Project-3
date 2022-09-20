@@ -11,7 +11,8 @@
                 <p>Type: {{ ingredient.type }}</p>
             </div>
             <div class="card-action">
-    
+                <a href="{% url 'update_ingredient' ingredient.id %}">Edit</a>
+                <a href="{% url 'delete_ingredient' ingredient.id %}">Delete</a>
             </div>
         </div>
     </div>
