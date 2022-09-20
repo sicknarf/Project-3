@@ -16,10 +16,14 @@
                 <a href="{% url 'drinks_delete' drink.id %}">Delete</a>
             </div>
         </div>
-       
-    <div class="card-action">
-        <a href="{% url 'recipe_create' drink.id %}">add a recipe</a>
-    </div>
+
+        <!-- Insert photo markup below this comment -->
+        {% for recipe in drink.recipe_set.all %}
+        <a href="#">recipe #{{recipe.id}}</a><br />
+        {% endfor %}
+        <div class="card-action">
+            <a href="{% url 'add_recipe' drink.id %}">add a recipe</a>
+        </div>
 
 
 
