@@ -93,9 +93,11 @@ class IngredientUpdate(LoginRequiredMixin, UpdateView):
     def get_success_url(self, **kwargs):
         return reverse('ingredient_detail', args=(self.object.id, ))
 
-class IngredientDelete(LoginRequiredMixin, DeleteView):
-    model = Ingredient
-    success_url ='/ingredients/'
+# commented out and removed this functionality to reduce interference with recipe m2m relationship
+# leaving in for future implementation/improvement
+# class IngredientDelete(LoginRequiredMixin, DeleteView):
+#     model = Ingredient
+#     success_url ='/ingredients/'
 
 @login_required
 def add_recipe(request, drink_id):
