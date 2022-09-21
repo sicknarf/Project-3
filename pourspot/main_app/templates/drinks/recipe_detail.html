@@ -5,8 +5,9 @@
 <p>I'm trying to figure out so here are two dynamic elements:</p>
 <p>drink: {{drink}}</p>
 <p>skill: {{recipe.skill_level}}</p>
-<p>recipe:</p>
+<p>instructions: {{recipe.instructions}}</p>
 
+<p>ingredients:</p>
 {% if recipe.ingredients.count %}
     {% for ingredient in recipe.ingredients.all %}
     <p>{{ingredient.name}}</p>
@@ -14,6 +15,7 @@
 {% else %}
     <p>there are no ingredients in this recipe!</p>
 {% endif %}
-
+<p><a href="{% url 'recipe_delete' drink.id recipe.id %}">delete recipe</a></p>
+<p><a href="{% url 'recipe_update' drink.id recipe.id %}">edit recipe</a></p>
 
 {% endblock %}

@@ -38,9 +38,15 @@ def recipe_detail(request, drink_id, recipe_id):
     return render(request, 'drinks/recipe_detail.html', {'drink':drink, 'recipe':recipe})
 
 
-###################### NEEDS ATTENTION ######################
+
 # class RecipeDelete(LoginRequiredMixin, DeleteView):
 class RecipeDelete(DeleteView):
-    # model = Recipe
-    # success_url = 'drink detail (unsure how to link this just yet)'
-    pass
+    model = Recipe
+    success_url = '/drinks/'
+
+class RecipeUpdate(UpdateView):
+    model = Recipe
+
+    fields = ['instructions', 'ingredients', 'skill_level']
+    def get_success_url(self, **kwargs):
+        return reverse('recipe_detail', args=(self.object.drink.id, self.object.id, ))
