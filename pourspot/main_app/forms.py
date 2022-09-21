@@ -22,7 +22,7 @@ class IngredientForm(ModelForm):
         fields =['name', 'type']
 
     type = forms.CharField(
-        label='test',
+        label='what type?',
         widget=forms.Select(choices=INGREDIENT_TYPE),
 
     )
