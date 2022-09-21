@@ -1,6 +1,6 @@
 # imports for image uplaoading to AWS
 import os
-# import boto3
+import boto3
 import uuid
 
 # django imports
@@ -48,7 +48,6 @@ class DrinkCreate(LoginRequiredMixin, CreateView):
 
 class DrinkUpdate(LoginRequiredMixin, UpdateView):
     model = Drink
-
     fields = ['name', 'description', ]
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id, ))
