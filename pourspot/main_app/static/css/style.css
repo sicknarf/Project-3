@@ -1,5 +1,9 @@
-.title, .subtitle {
-    font-family: "Sofia";
-    text-shadow: 3px 3px 3px #ababab;
+.ingredient-list a:hover {
+    background-color: yellowgreen;
 }
 
+.ingredient-list {
+    display: grid;
+    grid-template-rows: 1 fr 3 fr 1 fr 1fr 1 fr;
+    grid-template-columns: 1fr 1fr;
+}

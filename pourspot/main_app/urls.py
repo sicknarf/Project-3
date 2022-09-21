@@ -43,4 +43,5 @@ urlpatterns = [
     
 
     path('accounts/signup/', views.signup, name='signup'),
+    path('drinks/<int:drink_id>/add_photo/', views.add_photo, name='add_photo'),
 ]

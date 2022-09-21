@@ -13,7 +13,7 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
 from django.http import HttpResponse
-from .models import Ingredient, Drink, Recipe
+from .models import Ingredient, Drink, Recipe, Photo
 from .forms import RecipeForm, IngredientForm
 
 def home(request):
@@ -148,3 +148,17 @@ def signup(request):
         'error_message': error_message
     }
     return render(request, 'registration/signup.html', context)
+
+def add_photo(request, drink_id):
+    photo_file = request.FILES.get('photo-file', None)
+    if photo_file:
+        s3 = boto3.client('s3')
+        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+        try:
+            bucket = os.environ['S3_BUCKET']
+            s3.upload_fileobj(photo_file, bucket, key)
+            url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+            Photo.objects.create(url=url, drink_id=drink_id)
+        except:
+            print('An error occurred uploading file to S3')
+    return redirect('detail',drink_id=drink_id)    
