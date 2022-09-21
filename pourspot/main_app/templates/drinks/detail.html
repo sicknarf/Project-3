@@ -18,19 +18,12 @@
         </div>
 
         <!-- Insert photo markup below this comment -->
-<<<<<<< HEAD
-        {% for recipe in drink.recipe_set.all %}
-            <a href="{% url 'recipe_detail' drink.id recipe.id %}">recipe #{{recipe.id}}</a><br />
-=======
         
         {% for recipe in drink.recipe_set.all %}
         <a href="{% url 'recipe_detail' drink.id recipe.id %}">recipe #{{recipe.id}}</a><br />
->>>>>>> 6454c8d99ac5d8512373dead4e2ffc5aaad7321d
         {% endfor %}
         <div class="card-action">
             <a href="{% url 'add_recipe' drink.id %}">add a recipe</a>
         </div>
-
-
-
+        
 {% endblock %}
