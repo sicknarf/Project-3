@@ -27,6 +27,7 @@ def add_recipe(request, drink_id):
         new_recipe = form.save(commit=False)
         new_recipe.drink_id = drink_id
         new_recipe.save()
+        form.save_m2m()
         drink = Drink.objects.get(id=drink_id)
         return render(request, 'drinks/detail.html', {'drink': drink})
     return render(request, 'main_app/recipe_form.html', {'form': form})
