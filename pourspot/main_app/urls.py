@@ -26,7 +26,7 @@ urlpatterns = [
     # http://localhost:8000/ingredients/edit
     path('ingredients/<int:pk>/update/', views.IngredientUpdate.as_view(), name="update_ingredient"),
     # http://localhost:8000/ingredients/delete
-    path('ingredients/<int:pk>/delete/', views.IngredientDelete.as_view(), name="delete_ingredient"),
+    # path('ingredients/<int:pk>/delete/', views.IngredientDelete.as_view(), name="delete_ingredient"),
     # http://localhost:8000/ingredients/detail
     path('ingredients/<int:ingredient_id>/', views.ingredient_detail, name='ingredient_detail'),
     path('ingredients/', views.add_ingredient, name="add_ingredient"),
@@ -41,6 +41,6 @@ urlpatterns = [
     # http://localhost:8000/drinks/1/recipes/1/edit/
     path('ingredients/<int:drink_id>/recipes/<int:pk>/edit', views.RecipeUpdate.as_view(), name='recipe_update'),
     
-    
+
     path('accounts/signup/', views.signup, name='signup'),
 ]
