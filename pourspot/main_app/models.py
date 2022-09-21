@@ -42,10 +42,9 @@ class Ingredient(models.Model):
 class Drink(models.Model):
     name = models.CharField(max_length=100)  # HAS A
     description = models.TextField(max_length=250)
-    # is_private = models.BooleanField()
-    ingredients = models.ManyToManyField(Ingredient)
+    
      # Add the foreign key linking to a user instance
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
