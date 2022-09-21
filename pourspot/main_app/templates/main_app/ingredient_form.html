@@ -14,15 +14,19 @@
         <input type="submit" value="Submit!" class="btn">
     </form>
     
+    
+    <div class="section">
+      <div class="places-grid">
     {% if object %}
     {% else %}
     {% if ingredients.count %}
     <h1>Ingredients List</h1>
     {% for ingredient in ingredients %}
+    <div class="test">
       <a href="{% url 'ingredient_detail' ingredient.id %}" class="ingredient-list">
         <div class="row">
-          <div class="col s6">
-            <div class="card">
+          <div class="col s12 m6">
+            <div class="card hoverable">
           <div class="card-content ">
             <span class="card-title">
               {{ ingredient.name }}
@@ -32,6 +36,9 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
       </a>
       {% endfor %}
     {% else %}
@@ -39,7 +46,7 @@
       <h5>No Ingredients :(</h5>
     {% endif %}
     {% endif %}
-
+  
 
     <script>
         const typeSelect = document.getElementById('id_type');

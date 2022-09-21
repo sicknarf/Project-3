@@ -2,8 +2,26 @@
     background-color: yellowgreen;
 }
 
+.row {
+}
+
 .ingredient-list {
+
+}
+
+.test {
+    background-color: aquamarine;
+    height: 100px;
     display: grid;
-    grid-template-rows: 1 fr 3 fr 1 fr 1fr 1 fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1 fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.hoverable {
+    /* background-color: yellow; */
 }
