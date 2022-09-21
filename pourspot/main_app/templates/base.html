@@ -20,10 +20,10 @@
             <ul class="right">
                 <!-- changes below -->
                 <li><a href="{% url 'about_us' %}">About</a></li>
+                <li><a href="{% url 'index' %}">View All Drinks</a></li>
                 {% if user.is_authenticated %} 
                   <li><a href="{% url 'add_ingredient' %}">Ingredients</a></li>
                   <li><a href="{% url 'drinks_create' %}">Add Drink</a></li>
-                  <li><a href="{% url 'index' %}">View All Drinks</a></li>
                   <li><a href="{% url 'logout' %}">Log Out</a></li>
                 {% else %} 
                   <li><a href="{% url 'login' %}">Log In</a></li>
