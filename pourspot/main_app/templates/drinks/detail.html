@@ -17,7 +17,7 @@
             </div>
         </div>
 
-{% for photo in pokemon.photo_set.all %}
+{% for photo in drink.photo_set.all %}
   <img class="responsive-img card-panel" src="{{photo.url}}">
 {% empty %}
   <div class="card-panel teal-text center-align">No Photos Uploaded</div>
@@ -31,7 +31,6 @@
 </form>
 
         <!-- Insert photo markup below this comment -->
-        
         {% for recipe in drink.recipe_set.all %}
         <a href="{% url 'recipe_detail' drink.id recipe.id %}">recipe #{{recipe.id}}</a><br />
         {% endfor %}
