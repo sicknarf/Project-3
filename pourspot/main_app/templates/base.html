@@ -19,17 +19,16 @@
             </ul>
             <ul class="right">
                 <!-- changes below -->
-                <li><a href="{% url 'about_us' %}">about</a></li>
-                {% comment %} {% if user.is_authenticated %} {% endcomment %}
-                {% comment %} <li><a href="{% url 'ingredients_add' %}">add ingredient</a></li>{% endcomment %}
-                  <li><a href="{% url 'add_ingredient' %}">ingredients</a></li>
-                  <li><a href="{% url 'drinks_create' %}">new drink</a></li>
-                  <li><a href="{% url 'index' %}">all drinks</a></li>
-                  <li><a href="#">log out</a></li>
-                {% comment %} {% else %} {% endcomment %}
-                  {% comment %} <li><a href="{% url 'login' %}">Log In</a></li>
-                  <li><a href="{% url 'signup' %}">Sign Up</a></li> {% endcomment %}
-                {% comment %} {% endif %} {% endcomment %}
+                <li><a href="{% url 'about_us' %}">About</a></li>
+                {% if user.is_authenticated %} 
+                  <li><a href="{% url 'add_ingredient' %}">Ingredients</a></li>
+                  <li><a href="{% url 'drinks_create' %}">Add Drink</a></li>
+                  <li><a href="{% url 'index' %}">View All Drinks</a></li>
+                  <li><a href="{% url 'logout' %}">Log Out</a></li>
+                {% else %} 
+                  <li><a href="{% url 'login' %}">Log In</a></li>
+                  <li><a href="{% url 'signup' %}">Sign Up</a></li> 
+                {% endif %}
               </ul>
         </div>
     </nav>

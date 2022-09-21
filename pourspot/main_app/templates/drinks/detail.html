@@ -18,11 +18,6 @@
         </div>
 
         <!-- Insert photo markup below this comment -->
-
-        {% for recipe in drink.recipe_set.all %}
-        <a href="{% url 'recipe_detail' drink.id recipe.id %}">recipe #{{recipe.id}}</a><br />
-{% endfor %}
-
         
         {% for recipe in drink.recipe_set.all %}
         <a href="{% url 'recipe_detail' drink.id recipe.id %}">recipe #{{recipe.id}}</a><br />
@@ -31,7 +26,5 @@
         <div class="card-action">
             <a href="{% url 'add_recipe' drink.id %}">add a recipe</a>
         </div>
-
-
-
+        
 {% endblock %}
