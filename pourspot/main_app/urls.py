@@ -50,7 +50,8 @@ urlpatterns = [
 
     ###################### NEEDS ATTENTION ######################
     # http://localhost:8000/drinks/1/recipes/1/delete/
-    path('ingredients/<int:drink_id>/recipes/<int:recipe_id>/delete', viewsrecipe.RecipeDelete.as_view(), name='recipe_delete'),
+    path('ingredients/<int:drink_id>/recipes/<int:pk>/delete', viewsrecipe.RecipeDelete.as_view(), name='recipe_delete'),
+    path('ingredients/<int:drink_id>/recipes/<int:pk>/edit', viewsrecipe.RecipeUpdate.as_view(), name='recipe_update'),
     
     path('accounts/signup/', views.signup, name='signup'),
 ]
