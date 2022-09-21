@@ -1,6 +1,6 @@
 # imports for image uplaoading to AWS
 import os
-# import boto3
+import boto3
 import uuid
 
 # django imports
@@ -13,7 +13,7 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
 from django.http import HttpResponse
-from .models import Ingredient, Drink, Recipe
+from .models import Ingredient, Drink, Recipe, Photo
 from .forms import RecipeForm, IngredientForm
 
 def home(request):
@@ -159,7 +159,7 @@ def add_photo(request, drink_id):
             bucket = os.environ['S3_BUCKET']
             s3.upload_fileobj(photo_file, bucket, key)
             url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-            Drink.objects.create(url=url, drink_id=drink_id)
+            Photo.objects.create(url=url, drink_id=drink_id)
         except:
             print('An error occurred uploading file to S3')
     return redirect('detail',drink_id=drink_id)    
