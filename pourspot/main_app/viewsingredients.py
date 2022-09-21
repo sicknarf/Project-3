@@ -24,9 +24,29 @@ class IngredientList(ListView):
     model = Ingredient
     fields = '__all__'
 
-# class IngredientCreate(CreateView):
-#     model = Ingredient
-#     fields = ['name','type']
+
+def add_ingredient(request):
+    ingredients = Ingredient.objects.all
+    form = IngredientForm(request.POST)
+    if form.is_valid():
+        new_ingredient = form.save()
+        new_ingredient.save()
+    return render(request, 'main_app/ingredient_form.html', {'form': form, 'ingredients': ingredients})
+
+def ingredient_detail(request, ingredient_id):
+    ingredient = Ingredient.objects.get(id=ingredient_id)
+    # return HttpResponse("test")
+    ingredient_form=IngredientForm()
+    return render(
+        request, 
+        'main_app/ingredient_detail.html', 
+        {'ingredient':ingredient,'ingredient_form': ingredient_form}
+        )
+
+class IngredientCreate(CreateView):
+    model = Ingredient
+    fields = ['name','type']
+
 
 class IngredientUpdate(UpdateView):
     model = Ingredient
