@@ -56,7 +56,6 @@ class DrinkDelete(LoginRequiredMixin, DeleteView):
     model = Drink
     success_url = '/drinks/'
 
-
 class IngredientList(ListView):
     model = Ingredient
     fields = '__all__'

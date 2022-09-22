@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
   <h1>Add a New Recipe!</h1>
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
   <form action="" method="POST">
@@ -16,4 +17,5 @@
         const skillLevelSelect = document.getElementById('id_skill_level');
         M.FormSelect.init(skillLevelSelect);
     </script>
+
 {% endblock %}
