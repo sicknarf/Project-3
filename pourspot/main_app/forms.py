@@ -5,13 +5,10 @@ from .models import SKILL, Ingredient, Recipe, INGREDIENT_TYPE
 class RecipeForm(ModelForm):
     class Meta:
         model = Recipe
-        # I am unsure about the below piece of code
-        fields = ['ingredients', 'instructions', 'skill_level']
-        ingredients = forms.ModelChoiceField(Ingredient.objects.all())
-        # ingredients = forms.ModelMultipleChoiceField(
-        #     queryset=Ingredient.objects.all(),
-        #     widget=forms.CheckboxSelectMultiple,
-        # )
+        fields = ['name', 'ingredients', 'instructions', 'skill_level']
+        ingredients = forms.ModelChoiceField(
+            Ingredient.objects.all(),
+            )
         skill_level = forms.CharField(
             label='Choose the difficulty of this recipe', 
             widget=forms.Select(choices=SKILL),)

@@ -9,70 +9,33 @@
     <form action="" method="post">
         {% csrf_token %}
         <table>
-            {{ form.as_p }}
+            {{ form.as_table }}
         </table>
-        <input type="submit" value="Submit!" class="btn">
+        <input type="submit" value="Submit!" class="btn amber darken-4">
     </form>
-
-    <div class="container-test">
-      <div class="row">
-        <h4>Grids</h4>
-        <div class="row">
-          <div class="col"> content</div>
-          <div class="col"> content</div>
-          <div class="col"> content</div>
-          <div class="col"> content</div>
-        </div>
-      </div>
-    </div>
     
-    <div class="container-test">
-    <div class="row">
-      <h4>Grids</h4>
-      <div class="row">
-        <div class="col-test"> content</div>
-        <div class="col-test"> content</div>
-        <div class="col-test"> content</div>
-        <div class="col-test"> content</div>
-      </div>
-    </div>
-  </div>
-      
     {% if object %}
     {% else %}
     {% if ingredients.count %}
-    <h1>Ingredients List</h1>
-    <!-- <div class="container-ingredient-list"> -->
+    <h1>Ingredients Available:</h1>
     <div class="row">
     {% for ingredient in ingredients %}
-    <!-- <div class="places-grid"> -->
-      <div class="col s3">
-        <div class="card hoverable">
-          <div class="card-content ">
-            <span class="card-title">
-      <a href="{% url 'ingredient_detail' ingredient.id %}" class="ingredient-list">
-          
-           
-              {{ ingredient.name }}
-              {{ ingredient.type }}
-            </span>
-          </div>
+        <div class="col s2">
+            <div class="card">
+                <div class="card-content">
+            <a href="{% url 'ingredient_detail' ingredient.id %}" class="collection-item black-text">
+                {{ ingredient.name }}</a>
+                </div>
+            </div>
         </div>
-      </div>
-    <!-- </div> -->
- 
-<!-- </div>
-</div> -->
-<!-- </div> -->
-      </a>
-      {% endfor %}
+        {% endfor %}
     </div>
     {% else %}
  
       <h5>No Ingredients :(</h5>
     {% endif %}
     {% endif %}
-  
+
 
     <script>
         const typeSelect = document.getElementById('id_type');
