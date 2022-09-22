@@ -12,6 +12,19 @@
     background-color: black;
 } */
 
+.title, .subtitle{
+    font-family: 'Ms Madi', cursive;
+    font-size: 100px;
+    text-align: center;
+}
+
+.cocktails {
+    background-image: url("https://pourspot-bucket.s3.us-west-1.amazonaws.com/PWts0MF+copy.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
 .card, .card-action {
     border-radius: 15px;
 }
@@ -23,7 +36,6 @@
 #id_description {
     color:rgb(255, 209, 172)
 }
-
 
 .select-dropdown .dropdown-trigger{
     color:white
