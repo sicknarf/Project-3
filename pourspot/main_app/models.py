@@ -42,12 +42,8 @@ class Ingredient(models.Model):
 class Drink(models.Model):
     name = models.CharField(max_length=100)  # HAS A
     description = models.TextField(max_length=250)
-<<<<<<< HEAD
-    
-=======
     # is_private = models.BooleanField()
->>>>>>> d013e7133f1fcdb359588485dcdcde8856f01545
-     # Add the foreign key linking to a user instance
+    # Add the foreign key linking to a user instance
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

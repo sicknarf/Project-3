@@ -7,3 +7,9 @@
     grid-template-rows: 1 fr 3 fr 1 fr 1fr 1 fr;
     grid-template-columns: 1fr 1fr;
 }
+
+.title, .subtitle {
+    font-family: 'Dancing Script', san-serif;
+    text-align: center;
+}
+
