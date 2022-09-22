@@ -18,16 +18,26 @@ h1 {
 
 .card, .card-action {
     border-radius: 15px;
+    margin: none;
 }
 
 
 .card-drink-index:hover {
     border-radius: 15px;
-    /* transition: all .3s ease; */
+    transition: all .2s ease-in-out;
+    border: 3px solid #29A69A;
+    /* color:#29A69A; */
+}
+
+.card-ingredient-list:hover {
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
     border: 3px solid #29A69A;
     /* color:#29A69A; */
     height: 68px;
-    padding: 11px;
+    /* padding: 11px; */
+    margin: none;
+    /* background-color: #cd9620; */
 }
 
 /* .card-ingredient-form {
