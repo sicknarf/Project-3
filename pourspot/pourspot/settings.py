@@ -14,7 +14,8 @@ import django_on_heroku
 from pathlib import Path
 import os
 import environ
-django_on_heroku.settings(locals())
+import django_on_heroku
+
 env = environ.Env()
 
 
