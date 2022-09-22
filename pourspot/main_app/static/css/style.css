@@ -9,19 +9,54 @@
 
 }
 
+nav {
+    background-color: #324B4C;
+}
+
 .test {
     background-color: aquamarine;
     height: 100px;
-    display: grid;
-    grid-template-rows: 1 fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-rows: 1 fr; */
+    /* grid-template-rows: repeat(60px); */
+    /* grid-template-columns: repeat(1fr 1fr 1fr);
+    grid-template-rows: repeat(3, 40px); */
+    /* display: flex;*/
+    /* flex-wrap: wrap; */
 }
 
 .card {
     border-radius: 10px;
     border: 1px solid black;
+    width: 50%;
+    float: left;
 }
 
 .hoverable {
     /* background-color: yellow; */
+}
+
+h1 {
+    color:#95B0B2;
+    /* font-family: sofia ; */
+}
+
+.row {
+    /* display: grid;
+    grid-template-columns: repeat(3, 40px);  */
+   
+}
+
+.col {
+    background-color:darkseagreen;
+    margin: 5px;
+}
+
+.col-test {
+    background-color: gray;
+    margin: 5px;
+}
+
+.container-test {
+    width: 200px;
 }
