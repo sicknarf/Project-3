@@ -23,6 +23,7 @@
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
+}
 
 h1 {
     font-family: 'Ms Madi', cursive;
@@ -47,7 +48,7 @@ h1 {
     
 } */
 
-#id_instructions, #id_name {
+#id_instructions, #id_name, #id_password1, #id_password2 {
     color:rgb(255, 209, 172)
 }
 
@@ -77,3 +78,4 @@ h1 {
     display: block;
     line-height: 22px;
     padding: 14px 16px;
+}
