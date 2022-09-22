@@ -4,8 +4,8 @@
 
     {% for drink in drinks %}
     <a href="{% url 'detail' drink.id %}">
-        <div class="card">
-            <div class="card-content">
+        <div class="card blue-grey darken-2">
+            <div class="card-content amber-text text-lighten-5 z-depth-5">
                 <span class="card-title">{{ drink.name }}</span>
                 <p>Drink Name: {{ drink.name }}</p>
                 <p>Description: {{ drink.description }}</p>

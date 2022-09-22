@@ -133,7 +133,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+
+STATIC_URL = '/static/'
 # Add this variable to specify where successful logins should redirect to
 LOGIN_REDIRECT_URL = '/drinks/'
 # Add this variable to specify where logging out redirects to
