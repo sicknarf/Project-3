@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>hey howdy hey this is recipe_detail.html</h1>
-<p>I'm trying to figure out so here are two dynamic elements:</p>
-<p>drink: {{drink}}</p>
-<p>skill: {{recipe.skill_level}}</p>
-<p>instructions: {{recipe.instructions}}</p>
+<h1>{{recipe.name}}</h1>
+
 
 <p>ingredients:</p>
 {% if recipe.ingredients.count %}
@@ -15,7 +12,29 @@
 {% else %}
     <p>there are no ingredients in this recipe!</p>
 {% endif %}
-<p><a href="{% url 'recipe_delete' drink.id recipe.id %}">delete recipe</a></p>
-<p><a href="{% url 'recipe_update' drink.id recipe.id %}">edit recipe</a></p>
+<p>{{recipe.instructions}}</p>
+
+<div class="row">
+
+<div class="col s3">
+    <a href="{% url 'recipe_delete' drink.id recipe.id %}">
+        <div class="card">
+            <div class="card-content">
+                delete recipe
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="col s3">
+    <a href="{% url 'recipe_update' drink.id recipe.id %}">
+        <div class="card">
+            <div class="card-content">
+                edit recipe
+            <div>
+        </div>
+    </div>
+</a>
+</div>
 
 {% endblock %}
