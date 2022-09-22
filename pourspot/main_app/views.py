@@ -48,7 +48,6 @@ class DrinkCreate(LoginRequiredMixin, CreateView):
 
 class DrinkUpdate(LoginRequiredMixin, UpdateView):
     model = Drink
-
     fields = ['name', 'description', ]
     def get_success_url(self, **kwargs):
         return reverse('detail', args=(self.object.id, ))
