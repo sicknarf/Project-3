@@ -21,12 +21,15 @@
     <div class="row">
     {% for ingredient in ingredients %}
         <div class="col s2">
+        <a  href="{% url 'ingredient_detail' ingredient.id %}" class="collection-item black-text">
             <div class="card #d7ccc8 brown lighten-4 card-drink-index">
                 <div class="card-content">
-            <a  href="{% url 'ingredient_detail' ingredient.id %}" class="collection-item black-text">
-                {{ ingredient.name }}</a>
+            
+                {{ ingredient.name }}
+
                 </div>
-            </div>
+        </a>
+            </div></a>
         </div>
         {% endfor %}
     </div>
@@ -35,7 +38,6 @@
       <h5>No Ingredients :(</h5>
     {% endif %}
     {% endif %}
-
 
     <script>
         const typeSelect = document.getElementById('id_type');
