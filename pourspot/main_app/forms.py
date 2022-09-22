@@ -21,5 +21,4 @@ class IngredientForm(ModelForm):
     type = forms.CharField(
         label='what type?',
         widget=forms.Select(choices=INGREDIENT_TYPE),
-
     )

@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 #from datetime import date
-# Import the User
+# Import the user
 from django.contrib.auth.models import User
 
 SKILL = (
@@ -37,7 +37,6 @@ class Ingredient(models.Model):
     def get_absolute_url(self):
         # return reverse('ingredients_detail', kwargs={'pk': self.id})
         pass
-
 
 class Drink(models.Model):
     name = models.CharField(max_length=100)  # HAS A
