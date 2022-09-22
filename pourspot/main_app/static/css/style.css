@@ -181,10 +181,12 @@ img {
     font-size: 30px;
     margin: none !important;
     padding: none !important;
+ 
   }
 
   .about-title {
     font-size: 20px;
+    color: #29A69A;
   }
 
   .about-us {
