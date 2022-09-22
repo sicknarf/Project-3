@@ -1,7 +1,6 @@
 from django.urls import path
 from main_app import views
 
-
 urlpatterns = [
     # http://localhost:8000
     path('', views.home, name='home'),
@@ -20,8 +19,6 @@ urlpatterns = [
     # http://localhost:8000/drinks/2/delete/
     path('drinks/<int:pk>/delete/',
          views.DrinkDelete.as_view(), name='drinks_delete'),
-
-
     # http://localhost:8000/ingredients/
     path('ingredients/index/', views.IngredientList.as_view(), name='ingredients_index'),
     # http://localhost:8000/ingredients/edit
@@ -31,8 +28,6 @@ urlpatterns = [
     # http://localhost:8000/ingredients/detail
     path('ingredients/<int:ingredient_id>/', views.ingredient_detail, name='ingredient_detail'),
     path('ingredients/', views.add_ingredient, name="add_ingredient"),
-
-
     # http://localhost:8000/drinks/1/recipes/1/
     path('ingredients/<int:drink_id>/recipes/<int:recipe_id>/', views.recipe_detail, name='recipe_detail'),
     # http://localhost:8000/drinks/1/recipes/create/
@@ -41,8 +36,6 @@ urlpatterns = [
     path('ingredients/<int:drink_id>/recipes/<int:pk>/delete', views.RecipeDelete.as_view(), name='recipe_delete'),
     # http://localhost:8000/drinks/1/recipes/1/edit/
     path('ingredients/<int:drink_id>/recipes/<int:pk>/edit', views.RecipeUpdate.as_view(), name='recipe_update'),
-    
-
     path('accounts/signup/', views.signup, name='signup'),
     path('drinks/<int:drink_id>/add_photo/', views.add_photo, name='add_photo'),
 ]

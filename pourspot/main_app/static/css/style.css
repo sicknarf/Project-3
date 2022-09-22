@@ -12,6 +12,8 @@
     background-color: black;
 } */
 
+
+
 .title, .subtitle, .brand-logo, h2 {
     font-family: 'Ms Madi', cursive;
     font-size: 100px;
@@ -24,11 +26,11 @@ h3 {
 }
 
 .cocktails {
-    background-image: url("https://pourspot-bucket.s3.us-west-1.amazonaws.com/PWts0MF+copy.jpg");
+    background-image: url("https://pourspot-bucket.s3.us-west-1.amazonaws.com/PWts0MF+wide.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:cover;
+    background-position: center;
     height: 100vh;
-    background-size: cover;
 }
 
 h1 {
@@ -67,6 +69,10 @@ h1 {
 /* .card-ingredient-form {
     
 } */
+
+header {
+    margin-bottom: -40px;
+}
 
 #id_instructions, #id_name, #id_password1, #id_password2 {
     color:rgb(255, 209, 172)

@@ -1,11 +1,55 @@
-{% extends 'base.html' %}
-{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PourSpot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@300&family=Quicksand:wght@300;400;600;700&family=Righteous&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body class="blue-grey darken-4 amber-text text-lighten-5">
+<header class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper brown lighten-4">
+            <ul>
+                <li><a href="{% url 'home' %}" class="left brand-logo black-text">&nbsp;&nbsp;PourSpot&nbsp;&nbsp;</a></li>
+            </ul>
+            <ul class="right">
+                <!-- changes below -->
+                <li><a class="black-text" href="{% url 'about_us' %}">About</a></li>
+                <li><a class="black-text" href="{% url 'index' %}">View All Drinks</a></li>
+                {% if user.is_authenticated %} 
+                  <li><a class="black-text" href="{% url 'add_ingredient' %}">Ingredients</a></li>
+                  <li><a class="black-text" href="{% url 'drinks_create' %}">Add Drink</a></li>
+                  <li><a class="black-text" href="{% url 'logout' %}">Log Out</a></li>
+                {% else %} 
+                  <li><a class="black-text" href="{% url 'login' %}">Log In</a></li>
+                  <li><a class="black-text" href="{% url 'signup' %}">Sign Up</a></li> 
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</header>
 <div class="cocktails">
+<main class="container">
+
     <div>
         <span class="silver-text text-darken-3">
-            <h1 class="title">Pour Spot</h1>
-            <h3 class="subtitle">Welcome!</h3>
+            <h3 class="subtitle"><br><br>Welcome to Pour Spot!</h3>
         </span>
     </div>
+</main>
 </div>
-{% endblock %}
+<footer class="page-footer brown lighten-4">
+    <div class="right">All Rights Reserved, &copy; 2022 PourSpot &nbsp;</div>
+</footer>
+</body>
+</html>
