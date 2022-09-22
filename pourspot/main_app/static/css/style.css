@@ -20,7 +20,7 @@
     color:rgb(255, 209, 172)
 }
 
-#id_description {
+#id_description, #id_username, #id_password {
     color:rgb(255, 209, 172)
 }
 
@@ -47,9 +47,4 @@
     display: block;
     line-height: 22px;
     padding: 14px 16px;
-}
-
-footer {
-    position:absolute;
-    bottom:0
 }
