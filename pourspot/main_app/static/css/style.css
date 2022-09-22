@@ -12,9 +12,14 @@
     background-color: black;
 } */
 
-.title, .subtitle, .brand-logo, h2{
+.title, .subtitle, .brand-logo, h2 {
     font-family: 'Ms Madi', cursive;
     font-size: 100px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Ms Madi', cursive;
     text-align: center;
 }
 
@@ -111,7 +116,76 @@ li{
 
   }
 
+  .names {
+    margin: 0 60px;
+  }
+
 img {
     height: 150px;
+    margin: 20px 0 0 0;
 }
-  
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+  .title {
+    color: grey;
+  }
+
+  .about-name {
+    font-size: 30px;
+  }
+
+  .about-title {
+    font-size: 20px;
+  }
+
+  .about-us {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+   
+  }
+
+ .about-card {
+    height: 320px;
+  }
+
+  @media (max-width: 1485px), screen and (orientation: portrait) {
+    .about-card {
+        height: 370px;
+      }
+  }
+
+  @media (max-width: 390px), screen and (orientation: portrait) {
+    .about-card {
+        height: 370px;
+        flex-direction: column;
+        float: none;
+        width: 100%;
+      }
+  }
+
+  @media (orientation: portrait) {
+    .about-card  {
+      flex-direction: column;
+      float: none;
+      width: 100%;
+    }
+  }
