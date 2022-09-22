@@ -21,6 +21,7 @@
 .cocktails {
     background-image: url("https://pourspot-bucket.s3.us-west-1.amazonaws.com/PWts0MF+copy.jpg");
     background-repeat: no-repeat;
+    background-size: contain;
     height: 100vh;
     background-size: cover;
 }
@@ -48,9 +49,13 @@ h1 {
     transition: all .2s ease-in-out;
     outline: 3px solid #29A69A;
     /* color:#29A69A; */
-    height: 68px;
-    /* padding: 11px; */
-    margin: none;
+}
+
+.card-ingredient-list:hover {
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    outline: 3px solid #29A69A;
+    /* color:#29A69A; */
     /* background-color: #cd9620; */
 }
 
