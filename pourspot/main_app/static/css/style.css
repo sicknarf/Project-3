@@ -12,7 +12,7 @@
     background-color: black;
 } */
 
-.title, .subtitle{
+.title, .subtitle, .brand-logo, h2{
     font-family: 'Ms Madi', cursive;
     font-size: 100px;
     text-align: center;
@@ -90,5 +90,23 @@ h1 {
     padding: 14px 16px;
 }
 
+ul {
+    display: table;
+    margin: 0 auto;
 
+}
+
+li{
+    display: inline;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    list-style:none; 
+    margin: 0 20px;
+
+  }
+
+img {
+    height: 150px;
+}
   
