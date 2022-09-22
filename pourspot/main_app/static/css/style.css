@@ -23,11 +23,29 @@
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
+
+h1 {
+    font-family: 'Ms Madi', cursive;
+
 }
 
 .card, .card-action {
     border-radius: 15px;
 }
+
+
+.card-drink-index:hover {
+    border-radius: 15px;
+    /* transition: all .3s ease; */
+    border: 3px solid #29A69A;
+    /* color:#29A69A; */
+    height: 68px;
+    padding: 11px;
+}
+
+/* .card-ingredient-form {
+    
+} */
 
 #id_instructions, #id_name {
     color:rgb(255, 209, 172)
@@ -59,4 +77,3 @@
     display: block;
     line-height: 22px;
     padding: 14px 16px;
-}
