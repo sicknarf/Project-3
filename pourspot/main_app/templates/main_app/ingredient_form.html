@@ -11,7 +11,7 @@
         <table>
             {{ form.as_table }}
         </table>
-        <input type="submit" value="Submit!" class="btn amber darken-4">
+        <input type="submit" value="Submit!" class="btn waves-effect waves-light amber darken-4">
     </form>
     
     {% if object %}
@@ -21,9 +21,9 @@
     <div class="row">
     {% for ingredient in ingredients %}
         <div class="col s2">
-            <div class="card">
+            <div class="card #d7ccc8 brown lighten-4 card-drink-index">
                 <div class="card-content">
-            <a href="{% url 'ingredient_detail' ingredient.id %}" class="collection-item black-text">
+            <a  href="{% url 'ingredient_detail' ingredient.id %}" class="collection-item black-text">
                 {{ ingredient.name }}</a>
                 </div>
             </div>
