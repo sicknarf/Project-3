@@ -2,14 +2,54 @@
     background-color: yellowgreen;
 }
 
-.ingredient-list {
+/* .ingredient-list {
     display: grid;
     grid-template-rows: 1 fr 3 fr 1 fr 1fr 1 fr;
     grid-template-columns: 1fr 1fr;
+} */
+
+/* body {
+    background-color: black;
+} */
+
+.card, .card-action {
+    border-radius: 15px;
 }
 
-.title, .subtitle {
-    font-family: 'Dancing Script', san-serif;
-    text-align: center;
+#id_instructions, #id_name {
+    color:rgb(255, 209, 172)
 }
 
+#id_description {
+    color:rgb(255, 209, 172)
+}
+
+
+.select-dropdown .dropdown-trigger{
+    color:white
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid #cd9620;
+}
+
+.select-wrapper input.select-dropdown {
+    color:rgb(255, 209, 172)
+}
+
+.select-wrapper {
+    color:rgb(255, 209, 172)
+}
+
+.dropdown-content li>span {
+    font-size: 16px;
+    color: #363636;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+footer {
+    position:absolute;
+    bottom:0
+}

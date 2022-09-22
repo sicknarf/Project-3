@@ -50,6 +50,7 @@ class Drink(models.Model):
         return self.name
 
 class Recipe(models.Model):
+    name = models.CharField(max_length=30)
     ingredients = models.ManyToManyField(Ingredient)
     instructions = models.TextField(max_length=1000)
     skill_level = models.CharField(
