@@ -14,15 +14,33 @@
 
 
 
-.title, .subtitle, .brand-logo, h2 {
+.title, .subtitle, .brand-logo {
     font-family: 'Ms Madi', cursive;
     font-size: 100px;
     text-align: center;
 }
 
+h1 {
+    font-family: 'Ms Madi', cursive;
+    margin: 80px 0 20px 0;
+
+}
+
+h2 {
+    font-family: 'Ms Madi', cursive;
+    margin: 80px 0 20px 0; 
+    font-size: 100px; 
+    text-align: center; 
+}
+
 h3 {
     font-family: 'Ms Madi', cursive;
     text-align: center;
+}
+
+h4 {
+    font-family: 'Ms Madi', cursive;
+    text-align: center;  
 }
 
 .cocktails {
@@ -33,10 +51,7 @@ h3 {
     height: 100vh;
 }
 
-h1 {
-    font-family: 'Ms Madi', cursive;
 
-}
 
 .card, .card-action {
     border-radius: 15px;
@@ -58,12 +73,24 @@ h1 {
     /* color:#29A69A; */
 }
 
+.add-recipe:hover {
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    outline: 3px solid #fff8e1;
+}
+
 .card-ingredient-list:hover {
     border-radius: 15px;
     transition: all .2s ease-in-out;
     outline: 3px solid #29A69A;
     /* color:#29A69A; */
     /* background-color: #cd9620; */
+}
+
+.recipe:hover {
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    outline: 3px solid #29A69A;
 }
 
 /* .card-ingredient-form {
@@ -128,7 +155,7 @@ li{
 
 img {
     height: 150px;
-    margin: 20px 0 0 0;
+    margin: 40px 0 0 0;
 }
 
 .card {
@@ -136,12 +163,15 @@ img {
   }
 
 
-.container::after, .row::after {
+/* .container::after, .row::after {
     content: "";
     clear: both;
     display: table;
-  }
+  } */
 
+  .container {
+    padding: none;
+  }
 
   .title {
     color: grey;
@@ -149,6 +179,8 @@ img {
 
   .about-name {
     font-size: 30px;
+    margin: none !important;
+    padding: none !important;
   }
 
   .about-title {
@@ -163,13 +195,25 @@ img {
   }
 
  .about-card {
-    height: 320px;
+    height: 380px;
+  }
+
+  .linkedin{
+    height: 20px;
+    margin: 0 auto;
+    padding: ;
   }
 
   @media (max-width: 1485px), screen and (orientation: portrait) {
     .about-card {
-        height: 370px;
+        height: 410px;
       }
+    .about-name {
+        font-size: 40px;
+    }
+    .about-title {
+        font-size: 20px;
+    }
   }
 
   @media (max-width: 390px), screen and (orientation: portrait) {
