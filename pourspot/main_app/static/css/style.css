@@ -29,6 +29,7 @@ h2 {
 .font-ms-madi {
     font-family: 'Ms Madi', cursive;
     text-align: center;
+    font-size: 3.5em;
 }
 
 .cocktails {
@@ -59,6 +60,12 @@ h2 {
     transition: all .2s ease-in-out;
     outline: 3px solid #29A69A;
     /* color:#29A69A; */
+}
+
+.add-recipe-text {
+    font-size: 20px;
+    height: 70.5px;
+    margin: 0 auto;
 }
 
 .add-recipe:hover {
