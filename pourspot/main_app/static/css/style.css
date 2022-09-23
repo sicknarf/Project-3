@@ -21,6 +21,11 @@ h2 {
     font-size: 16px;
 }
 
+.label {
+    font-size: 18px;
+
+}
+
 .font-ms-madi {
     font-family: 'Ms Madi', cursive;
     text-align: center;

@@ -3,16 +3,16 @@
 
 <h1>{{recipe.name}}</h1>
 
-<p>INGREDIENTS:</p>
+<p class="teal-text lighten-2 label">INGREDIENTS:</p>
 {% if recipe.ingredients.count %}
     {% for ingredient in recipe.ingredients.all %}
-    <p>{{ingredient.name}}</p>
+    <p class="font-size">{{ingredient.name}}</p>
     {% endfor %}
 {% else %}
     <p>there are no ingredients in this recipe!</p>
 {% endif %}
-<p>RECIPE:</p>
-<p>{{recipe.instructions}}</p>
+<p class="teal-text lighten-2 label">RECIPE:</p>
+<p class="font-size">{{recipe.instructions}}</p>
 
 <div class="row">
 
