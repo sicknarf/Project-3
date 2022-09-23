@@ -45,7 +45,7 @@
     <h3 class="font-ms-madi">Recipes</h3>
     {% for recipe in drink.recipe_set.all %}
     <a href="{% url 'recipe_detail' drink.id recipe.id %}">
-      <div class="card #d7ccc8 brown lighten-4 black-text recipe">
+      <div class="card #d7ccc8 brown lighten-4 black-text center-align recipe">
         <div class="card-content">{{recipe.name}}</div>
       </div>
     </a>
@@ -53,7 +53,7 @@
 
     <div class="card #4db6ac teal lighten-2 add-recipe">
       <a href="{% url 'add_recipe' drink.id %}">
-        <div class="card-content black-text"><h3>add a recipe!</h3></div>
+        <div class="card-content black-text center-align"><h3>add a recipe!</h3></div>
       </a>
     </div>
   </div>
