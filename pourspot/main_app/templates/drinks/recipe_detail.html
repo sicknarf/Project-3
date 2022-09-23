@@ -30,6 +30,16 @@
 <div class="row">
 
 <div class="col s2">
+    <a href="{% url 'recipe_update' drink.id recipe.id %}">
+        <div class="card #4db6ac teal lighten-2 recipe recipe-detail-btn">
+            <div class="card-content white-text center-align">
+                Edit Recipe
+            </div>
+        </div>
+    </div>
+</a>
+
+<div class="col s2">
     <a href="{% url 'recipe_delete' drink.id recipe.id %}">
         <div class="card #eceff1 blue-grey lighten-5 delete">
             <div class="card-content teal-text center-align">
@@ -39,15 +49,8 @@
     </a>
 </div>
 
-<div class="col s2">
-    <a href="{% url 'recipe_update' drink.id recipe.id %}">
-        <div class="card #4db6ac teal lighten-2 recipe recipe-detail-btn">
-            <div class="card-content white-text center-align">
-                Edit Recipe
-            </div>
-        </div>
-    </div>
-</a>
+
+
 </div>
 
 {% endblock %}
