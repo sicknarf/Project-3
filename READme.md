@@ -34,7 +34,10 @@ ______________________________
 
 ![Figma Screenshot](https://i.imgur.com/RZVZp3S.png)
 
+
 ![WF/SignIn](https://i.imgur.com/YcRiGAO.png)
+
+![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png)
 
 ![WF/Adddrink](https://i.imgur.com/gUtMiOn.png)
 
@@ -46,9 +49,11 @@ ______________________________
 
 ![WF/Ingredients](https://i.imgur.com/pgwiOYw.png)
 
-![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png)
 
 #### Homepage
+![Homepage](https://i.imgur.com/wnoTMFV.png)
+
+
 
 #### Drinks Index Page
 ![Drink Index](https://i.imgur.com/slr7W8C.png)
@@ -69,13 +74,15 @@ ______________________________
 
 ## Wins
 
+
+"Coming together is a beginning, staying together is progress, and working together is success." – Henry Ford
+
 ##### *Collaboration*
 From the start, we had effective and efficient organization, communication, and collaboration. As this was our first group project, our goal was to make an inclusive and open experience for all team members. We established roles and divided tasks but we were constantly checking in with each other prior to making any decisions. This made it a safe space to share ideas throughout the entire project.
 
-We made sure we had constant communication with the Git Manager which led to minimal conflicts in github. It was a team effort whenever errors or bugs came about. Each member's voice was heard, acknowleged, and accepted. This behavior and process is reflected in our project. 
+We made sure we had constant communication with the Git Manager which led to minimal conflicts in github. It was a team effort whenever errors or bugs came about. Each member's voice was heard, acknowleged, and accepted. This behavior and process is reflected in our entire project. 
 
-We truly had a great time working together. It was great to see each member shine in their own strengths. We celebrated every big & small wins together. HELP PLEASE?!?!? IM BEING TOO SAPPY LOL!
-
+It was great to see each member shine and showcase their strengths. Each member brought their unique perspectives and were open to other ideas. Somehow we found the perfect balance of work, focus, fun, and play! We truly had a great time working together. 
 
 
 ## Challenges
@@ -137,6 +144,20 @@ ______________________________
 ![Zoom](https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white)
 
 https://materializecss.com/icons.html
+
+
+## Future Add-ons
+*   User Profile
+*   User comments/ratings/likes
+*   Recipe privacy options (public/private)
+*   Search bar: liquor/recipes
+*   Hover shows quick info/reccomendations/skills
+*   Print or email ingredients
+*   Recommended drinks: month, season, occasions, etc
+*   E-commerce capability
+*   Add drinks API
+*   Shopping List for ingredients
+
 
 ## Team Nellienator
 ______________________________
