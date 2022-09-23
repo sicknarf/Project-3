@@ -91,8 +91,8 @@ It was great to see each member shine and showcase their strengths. Each member 
 A few challenges we faced as a group was the initial many-to-many (M:M) relationship between recipes and ingredients. We were able to save the ingredients in the admin portal but the ingredients would not reflect in our front-end recipe form. To resolve this, we added:
 ![m:m screenshot](https://i.imgur.com/Wh56UMH.png)
 
-##### *Heroku????????*
-Another step that held us back was deploying our app in Heroku
+##### *Heroku*
+Another step that held us back was deploying our app in Heroku. We sought out help from the instructors and our git hub manager solved it by making a new git repository in the working folder.
 
 ##### *Materialize*
 Lastly, Materialize was a tool that took us some time to familiarize ourselves with. The syntax and placement of keywords was tricky at first but we quickly learned and utilized the available features.
@@ -162,16 +162,16 @@ https://materializecss.com/icons.html
 ## Team Nellienator
 ______________________________
 Ann Copeland 
-anncopeland@gmail.com
+*   [GitHub](https://github.com/anncopeland)
 
 Francis Gacad
-fgacad@gmail.com
+*   [GitHub](https://github.com/sicknarf)
 
 Marra Emata
-marra.emata@gmail.com
+*   [GitHub](https://github.com/marramags)
 
 Kyro Mills
-kyromills@gmail.com
+*   [GitHub](https://github.com/KyroMills)
 
 
 
