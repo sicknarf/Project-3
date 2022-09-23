@@ -266,8 +266,7 @@ img {
     -webkit-user-select: none;
 }
 
-ul.select-dropdown,
-ul.dropdown-content {
+ul.my-dropdown {
     width: 11% !important;
     overflow-x: hidden;
 }
