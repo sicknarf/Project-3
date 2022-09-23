@@ -4,6 +4,10 @@ PourSpot is a Python Django website created to bring both industry leaders and l
 
 The team had a great time collaborating in all aspects from project name, design, and functionality.  We hope everyone who visits the website will have a great time! 
 
+## Check out our app!
+______________________________
+*   [Heroku](https://www.pourspot.us/)
+
 ## Description
 ___________________________
 **Problem:**
@@ -11,8 +15,6 @@ People want to know how to make drinks and what ingredients to use.
 
 **Solution:** 
 We are creating a website to introduce and recommend to cocktails and recipes that have been tested and formulated.
-
-
 
 
 ## Languages Used
@@ -24,7 +26,6 @@ ______________________________
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
 
 
 ## Illustrations
@@ -45,7 +46,38 @@ ______________________________
 
 ![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png)
 
+## Wins
 
+##### *Collaboration*
+From the start, we had effective and efficient organization, communication, and collaboration. As this was our first group project, our goal was to make an inclusive and open experience for all team members. We established roles for each member but were always checking in on each other prior to making any decisions. This made it a safe space to share ideas throughout the entire project.
+
+We made sure we had constant communication with the Git Manager which led to minimal conflicts in github. It was a team effort whenever errors or bugs came about. Each member's voice was heard, acknowleged, and accepted and this reflects in our project. 
+
+We truly had a great time working together. It was great to see each member shine in their own strengths. We celebrated every big & small wins together. 
+
+
+
+## Challenges
+
+##### *Many to Many (Recipes)*
+A few challenges we faced as a group was the initial many-to-many (M:M) relationship between recipes and ingredients. We were able to save the ingredients in the admin portal but the ingredients would not reflect in our front-end recipe form. To resolve this, we added:
+![m:m screenshot](https://i.imgur.com/Wh56UMH.png)
+
+##### *Heroku????????*
+Another step that held us back was deploying our app in Heroku
+
+##### *Materialize*
+Lastly, Materialize was a tool that took us some time to familiarize ourselves with. The syntax and placement of keywords was tricky at first but we quickly learned and utilized the available features.
+
+## Links
+*   [Heroku](https://www.pourspot.us/)
+
+*   [Trello](https://trello.com/b/VkS0USDu/p3-project-pourspot)
+
+*   [ERD Diagram](https://lucid.app/lucidchart/8135f306-2570-4628-a7a0-da86782e35ae/edit?invitationId=inv_5083b573-dc80-4f30-9180-2f22504adeaf&page=0_0#)
+*   [Pitch Deck](https://docs.google.com/presentation/d/1xaDEJKkpP1mqdn74-1cp61Uyx4uKTkhit8dectRA4UQ/edit#slide=id.g11a15d11d10_0_8)
+*   [Wireframe](https://www.figma.com/file/qIcEH8yV7f6ajPna4qIr3a/PourSpot?node-id=0%3A1)
+*   [Check List](https://docs.google.com/spreadsheets/d/1Tu3kPAVTjGB5EoAeHTnPjEShTtouLuK7bOjuKoOJmiw/edit?usp=sharing)
 
 ## Technologies
 ______________________________
@@ -100,6 +132,4 @@ Kyro Mills
 kyromills@gmail.com
 
 
-## Launch
-______________________________
-Heroku 
+
