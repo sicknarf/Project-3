@@ -75,7 +75,7 @@ def ingredient_detail(request, ingredient_id):
     ingredient_form=IngredientForm()
     return render(
         request, 
-        'main_app/ingredient_detail.html', 
+        'ingredients/ingredient_detail.html', 
         {'ingredient':ingredient,'ingredient_form': ingredient_form}
         )
 
