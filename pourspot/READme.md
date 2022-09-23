@@ -2,11 +2,15 @@
 
 PourSpot is a Python Django website created to bring both industry leaders and liezure participants to a common place for cocktail recipe inspiration.  
 
+The team had a great time collaborating in all aspects from project name, design, and functionality.  We hope everyone who visits the website will have a great time! 
 
 ## Description
 ___________________________
+**Problem:**
+People want to know how to make drinks and what ingredients to use.
 
-
+**Solution:** 
+We are creating a website to introduce and recommend to cocktails and recipes that have been tested and formulated.
 
 
 
@@ -81,6 +85,7 @@ ______________________________
 
 ![Zoom](https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white)
 
+https://materializecss.com/icons.html
 
 ## Team Nellienator
 ______________________________
@@ -99,3 +104,4 @@ kyromills@gmail.com
 
 ## Launch
 ______________________________
+Heroku 
