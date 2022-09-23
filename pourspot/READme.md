@@ -32,6 +32,8 @@ ______________________________
 ______________________________
 ![ERD](https://trello.com/1/cards/6326422c77a68f001e352c2b/attachments/632797103aa80101ded949f1/previews/632797113aa80101ded94a82/download/Screen_Shot_2022-09-18_at_3.09.14_PM.png)
 
+![Figma Screenshot](https://i.imgur.com/RZVZp3S.png)
+
 ![WF/SignIn](https://i.imgur.com/YcRiGAO.png)
 
 ![WF/Adddrink](https://i.imgur.com/gUtMiOn.png)
@@ -46,14 +48,33 @@ ______________________________
 
 ![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png)
 
+#### Homepage
+
+#### Drinks Index Page
+![Drink Index](https://i.imgur.com/slr7W8C.png)
+#### Add a Drink Page
+![Add a Drink](https://i.imgur.com/kM5z2Qg.png)
+#### Drink Details Page
+![Drink Details](https://i.imgur.com/ii6fHAc.png)
+#### Recipe Form Page
+![Recipe Form](https://i.imgur.com/hsqGcom.png)
+#### Recipe Page
+![Recipe View](https://i.imgur.com/Xy9rVaP.png)
+#### Ingredient Form & List Page
+![Ingredient Form](https://i.imgur.com/yUMg53R.png)
+#### Ingredient Detail/Edit Page
+![Ingredient Detail/Edit](https://i.imgur.com/E7lUXcA.png)
+
+
+
 ## Wins
 
 ##### *Collaboration*
-From the start, we had effective and efficient organization, communication, and collaboration. As this was our first group project, our goal was to make an inclusive and open experience for all team members. We established roles for each member but were always checking in on each other prior to making any decisions. This made it a safe space to share ideas throughout the entire project.
+From the start, we had effective and efficient organization, communication, and collaboration. As this was our first group project, our goal was to make an inclusive and open experience for all team members. We established roles and divided tasks but we were constantly checking in with each other prior to making any decisions. This made it a safe space to share ideas throughout the entire project.
 
-We made sure we had constant communication with the Git Manager which led to minimal conflicts in github. It was a team effort whenever errors or bugs came about. Each member's voice was heard, acknowleged, and accepted and this reflects in our project. 
+We made sure we had constant communication with the Git Manager which led to minimal conflicts in github. It was a team effort whenever errors or bugs came about. Each member's voice was heard, acknowleged, and accepted. This behavior and process is reflected in our project. 
 
-We truly had a great time working together. It was great to see each member shine in their own strengths. We celebrated every big & small wins together. 
+We truly had a great time working together. It was great to see each member shine in their own strengths. We celebrated every big & small wins together. HELP PLEASE?!?!? IM BEING TOO SAPPY LOL!
 
 
 

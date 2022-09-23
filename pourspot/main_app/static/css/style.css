@@ -29,6 +29,7 @@ h2 {
 .font-ms-madi {
     font-family: 'Ms Madi', cursive;
     text-align: center;
+    font-size: 3.5em;
 }
 
 .cocktails {
@@ -62,6 +63,12 @@ h2 {
     /* color:#29A69A; */
 }
 
+.add-recipe-text {
+    font-size: 20px;
+    height: 70.5px;
+    margin: 0 auto;
+}
+
 .add-recipe:hover {
     border-radius: 15px;
     transition: all .2s ease-in-out;
@@ -82,12 +89,15 @@ h2 {
     outline: 3px solid #29A69A;
 }
 
+.delete{
+    border-radius: 15px;
+    outline: 3px solid #29A69A; 
+}
+
 .delete:hover {
-    color: #cd9620;
     border-radius: 15px;
     transition: all .2s ease-in-out;
-    outline: 3px solid #cd9620;
-
+    outline: 3px solid #00695c ; 
 }
 
 /* .card-ingredient-form {
