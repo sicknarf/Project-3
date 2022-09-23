@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@300&family=Quicksand:wght@300;400;600;700&family=Righteous&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins:wght@300&family=Quicksand:wght@300;400;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
@@ -22,9 +22,9 @@
             <ul>
                 <li><a href="{% url 'home' %}" class="left brand-logo black-text">&nbsp;&nbsp;PourSpot&nbsp;&nbsp;</a></li>
             </ul>
-            <ul class="right">
+            <a class="right dropdown-trigger btn" href="#" data-target="dropdown1">&#9776; menu</a>
+            <ul class="dropdown-content" id="dropdown1" style="width: 300px">
                 <!-- changes below -->
-                <li><a class="black-text" href="{% url 'about_us' %}">About</a></li>
                 <li><a class="black-text" href="{% url 'index' %}">View All Drinks</a></li>
                 {% if user.is_authenticated %} 
                   <li><a class="black-text" href="{% url 'add_ingredient' %}">Ingredients</a></li>
@@ -34,16 +34,20 @@
                   <li><a class="black-text" href="{% url 'login' %}">Log In</a></li>
                   <li><a class="black-text" href="{% url 'signup' %}">Sign Up</a></li> 
                 {% endif %}
+                  <li><a class="black-text" href="{% url 'about_us' %}">About</a></li>
             </ul>
         </div>
     </nav>
-</header>
+
+    
+      
+    </header>
 <div class="cocktails">
 <main class="container">
 
     <div>
         <span class="silver-text text-darken-3">
-            <h3 class="subtitle"><br><br>Welcome to Pour Spot!</h3>
+            <h3 class="subtitle" id="splash"><br><br>Welcome to Pour Spot!</h3>
         </span>
     </div>
 </main>
@@ -51,5 +55,13 @@
 <footer class="page-footer brown lighten-4">
     <div class="right footer-text">All Rights Reserved, &copy; 2022 PourSpot &nbsp;</div>
 </footer>
+<script>
+    $(document).ready(function(){
+        $('.modal').modal();
+        $('.dropdown-trigger').dropdown();
+        $('.dropdown-trigger').dropdown('alignment', right);
+     });
+    
+</script>
 </body>
 </html>
