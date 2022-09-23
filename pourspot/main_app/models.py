@@ -52,6 +52,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=30)
     ingredients = models.ManyToManyField(Ingredient)
     instructions = models.TextField(max_length=1000)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     skill_level = models.CharField(
         max_length = 1,
         choices = SKILL,

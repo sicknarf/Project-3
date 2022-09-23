@@ -28,7 +28,7 @@
 
 
 <div class="row">
-
+{%if recipe.user == user %}
 <div class="col s2">
     <a href="{% url 'recipe_update' drink.id recipe.id %}">
         <div class="card #4db6ac teal lighten-2 recipe recipe-detail-btn">
@@ -48,7 +48,7 @@
         </div>
     </a>
 </div>
-
+{% endif %}
 
 
 </div>

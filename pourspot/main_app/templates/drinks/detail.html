@@ -10,10 +10,12 @@
         <p>Drink Name: {{ drink.name }}</p>
         <p>Description: {{ drink.description|linebreaks }}</p>
       </div>
+      {% if drink.user == user %}
       <div class="card-action">
         <a href="{% url 'drinks_update' drink.id %}">Edit</a>
         <a href="{% url 'drinks_delete' drink.id %}">Delete</a>
       </div>
+      {% endif %}
     </div>
 
     {% for photo in drink.photo_set.all %}
