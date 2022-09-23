@@ -34,7 +34,7 @@ ______________________________
 
 ![Figma Screenshot](https://i.imgur.com/RZVZp3S.png)
 
-![WF/SignIn](https://i.imgur.com/YcRiGAO.png)
+<!-- ![WF/SignIn](https://i.imgur.com/YcRiGAO.png)
 
 ![WF/Adddrink](https://i.imgur.com/gUtMiOn.png)
 
@@ -46,10 +46,10 @@ ______________________________
 
 ![WF/Ingredients](https://i.imgur.com/pgwiOYw.png)
 
-![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png)
+![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png) -->
 
 #### Homepage
-
+![Homepage](https://i.imgur.com/wnoTMFV.png)
 #### Drinks Index Page
 ![Drink Index](https://i.imgur.com/slr7W8C.png)
 #### Add a Drink Page
