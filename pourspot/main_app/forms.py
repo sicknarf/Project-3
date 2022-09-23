@@ -6,8 +6,9 @@ class RecipeForm(ModelForm):
     class Meta:
         model = Recipe
         fields = ['name', 'ingredients', 'instructions', 'skill_level']
-        ingredients = forms.ModelChoiceField(
-            Ingredient.objects.all(),
+        ingredients = forms.ModelMultipleChoiceField(
+            queryset=Ingredient.objects.all(),
+            widget=forms.CheckboxSelectMultiple,
             )
         skill_level = forms.CharField(
             label='Choose the difficulty of this recipe', 
