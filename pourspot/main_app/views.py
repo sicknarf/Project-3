@@ -100,11 +100,11 @@ class IngredientUpdate(LoginRequiredMixin, UpdateView):
 @login_required
 def add_recipe(request, drink_id):
     form = RecipeForm(request.POST)
-    print(request.POST)
     drink = Drink.objects.get(id=drink_id)
     if form.is_valid():
         new_recipe = form.save(commit=False)
         new_recipe.drink_id = drink_id
+        new_recipe.user = request.user
         new_recipe.save()
         form.save_m2m()
         drink = Drink.objects.get(id=drink_id)
