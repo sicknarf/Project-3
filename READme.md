@@ -34,7 +34,10 @@ ______________________________
 
 ![Figma Screenshot](https://i.imgur.com/RZVZp3S.png)
 
-<!-- ![WF/SignIn](https://i.imgur.com/YcRiGAO.png)
+
+![WF/SignIn](https://i.imgur.com/YcRiGAO.png)
+
+![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png)
 
 ![WF/Adddrink](https://i.imgur.com/gUtMiOn.png)
 
@@ -46,10 +49,12 @@ ______________________________
 
 ![WF/Ingredients](https://i.imgur.com/pgwiOYw.png)
 
-![WF/AllDrinks](https://i.imgur.com/AF0tDeo.png) -->
 
 #### Homepage
 ![Homepage](https://i.imgur.com/wnoTMFV.png)
+
+
+
 #### Drinks Index Page
 ![Drink Index](https://i.imgur.com/slr7W8C.png)
 #### Add a Drink Page
@@ -69,6 +74,7 @@ ______________________________
 
 ## Wins
 
+
 "Coming together is a beginning, staying together is progress, and working together is success." – Henry Ford
 
 ##### *Collaboration*
@@ -77,6 +83,7 @@ From the start, we had effective and efficient organization, communication, and 
 We made sure we had constant communication with the Git Manager which led to minimal conflicts in github. It was a team effort whenever errors or bugs came about. Each member's voice was heard, acknowleged, and accepted. This behavior and process is reflected in our entire project. 
 
 It was great to see each member shine and showcase their strengths. Each member brought their unique perspectives and were open to other ideas. Somehow we found the perfect balance of work, focus, fun, and play! We truly had a great time working together. 
+
 
 ## Challenges
 
@@ -138,6 +145,7 @@ ______________________________
 
 https://materializecss.com/icons.html
 
+
 ## Future Add-ons
 *   User Profile
 *   User comments/ratings/likes
@@ -149,6 +157,7 @@ https://materializecss.com/icons.html
 *   E-commerce capability
 *   Add drinks API
 *   Shopping List for ingredients
+
 
 ## Team Nellienator
 ______________________________
